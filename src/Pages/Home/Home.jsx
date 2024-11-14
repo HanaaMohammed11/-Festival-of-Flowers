@@ -5,9 +5,10 @@ import PlantsSlider from '../../Components/PlantSlider/PlantsSlider'
 
 export default function Home() {
   return (
-    <div><NavBar/>
+    <div>
     <Header/>
     <PlantsSlider/>
+
     </div>
   )
 }
