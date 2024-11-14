@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png";
 
 export default function NavBar() {
   return (
-    <Navbar className="bg-green-950">
+    <Navbar className="bg-green-950/80">
       <Navbar.Brand href="#" className="flex items-center">
         <div className="w-9 h-9">
           <img src={logo} alt="Festival of Flowers Logo" />
