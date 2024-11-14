@@ -12,7 +12,7 @@ export default function Header() {
       ".hero-image",
       { y: 0, x: 0 },
       {
-        y: 700,  
+        y: 690,  
         x: 500,  
         scrollTrigger: {
           trigger: ".about",
@@ -56,7 +56,7 @@ export default function Header() {
             src={hero}
             alt="Hero"
             className="hero-image w-full sm:w-1/2 lg:-mt-52 -mt-32 sm:-mt-24 filter"
-            style={{ filter: "drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9))" }}
+            style={{ filter: "drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.9))" }}
           />
           <div className="text-center z-10 w-full sm:w-1/2 px-4">
             <h1 className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">Decorate your Home with Plants</h1>
