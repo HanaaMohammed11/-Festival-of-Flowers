@@ -41,16 +41,17 @@ export default function Header() {
 
   return (
     <div>
-      <div
-        className="min-h-screen flex flex-col items-center text-white justify-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(${headerImg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+   <div
+  className="min-h-screen flex flex-col items-center text-white justify-center animate-zoomBackground"
+  style={{
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(${headerImg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
+  }}
+>
+
         <div className="flex flex-col sm:flex-row bg-green-950/80 backdrop-blur-md items-center justify-center rounded-xl p-4 sm:p-8 lg:p-12 max-w-4xl w-full mx-4 lg:max-h-80 space-y-4 sm:space-y-0 sm:space-x-6">
           <img
             src={hero}
