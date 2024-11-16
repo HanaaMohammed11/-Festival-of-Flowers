@@ -13,7 +13,7 @@ export default function PlantsSlider() {
   const nav=useNavigate()
   return (
     <div className="plantscontainer relative text-center lg:mt-28 md:mt-28 sm:mt-12 mt-12 h-[500px]">
-      <h1 className="section-heading lg:text-5xl md:text-5xl sm:text-4xl mb-8">Our Plants</h1>
+      <h1 className="section-heading lg:text-5xl md:text-5xl sm:text-4xl text-3xl mb-8">Our Plants</h1>
 
       {/* Controls */}
       <div className="  flex justify-between items-center px-10 z-20">
