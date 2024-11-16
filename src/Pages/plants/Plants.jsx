@@ -27,7 +27,7 @@ function Plants (){
       <h1 className="text-center text-6xl text-white pt-12">Shop Products</h1>
  </div>
  <div className="bg-zinc-300 h-[10vh] flex justify-center">
- <div className="relative pt-5 w-[20%] pl-5">
+ <div className="relative pt-5 w-[30%] ">
   <input 
     className="rounded-lg w-full h-7 pl-2 " 
     placeholder="Search..."
@@ -35,17 +35,6 @@ function Plants (){
   <span className="absolute right-5 top-9 transform -translate-y-1/2 text-gray-500">
   <CiSearch />
   </span>
-</div>
-<div className="flex items-center space-x-0 w-[20%] ml-96">
-  <div>
-    <Label htmlFor="countries" value="Sort By" />
-  </div>
-  <select id="countries" required className="w-0 bg-transparent border-none cursor-pointer">
-    <option>20-50 Price</option>
-    <option>50-100 Price</option>
-    <option>100-150 Price</option>
-    <option>150-200 Price</option>
-  </select>
 </div>
  </div>
  <div className="flex justify-between mt-20 container lg:mx-10 border-b-2 pb-5" >
@@ -162,7 +151,7 @@ function Plants (){
         modules={[FreeMode, Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide><img src="public/473DA96E-6FB7-4643-BE54-36753F79B647_1440x.webp"  /></SwiperSlide>
+        <SwiperSlide><img src="public/473DA96E-6FB7-4643-BE54-36753F79B647_1440x.webp"/></SwiperSlide>
         <SwiperSlide><img src="public/images (2).jpg"/></SwiperSlide>
         <SwiperSlide><img src="public/istockphoto-1268045137-612x612.webp"/></SwiperSlide>
         <SwiperSlide><img src="public/thumbnail-9c50c6a0f6d332867fe6f724b543e9c1-1140x618-1.jpeg" /></SwiperSlide>
@@ -171,7 +160,7 @@ function Plants (){
         <SwiperSlide><img src="public/images (3).jpg"  /></SwiperSlide>
         <SwiperSlide><img src="public/GettyImages-1404287433.webp"  /></SwiperSlide>      
           <SwiperSlide><img src="public/images (4).jpg"  /></SwiperSlide>      
-            <SwiperSlide><img src="public/plumeria-for-sale.webp"  /></SwiperSlide>      
+          <SwiperSlide><img src="public/plumeria-for-sale.webp"  /></SwiperSlide>      
           <SwiperSlide><img src="public/1527091860274.webp"  /></SwiperSlide>
       </Swiper>
  </div>
