@@ -12,7 +12,7 @@ export default function PlantsSlider() {
 
   const nav=useNavigate()
   return (
-    <div className="plantscontainer relative text-center my-44 h-[500px]">
+    <div className="plantscontainer relative text-center mt-28 h-[500px]">
       <h1 className="section-heading text-5xl mb-8">Our Plants</h1>
 
       {/* Controls */}
