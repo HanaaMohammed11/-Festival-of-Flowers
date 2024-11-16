@@ -1,10 +1,12 @@
 import { Card } from "flowbite-react";
 import { Link } from "react-router-dom";
+import slide_img from './../../assets/plant3.jpg';
+
 function Cards() {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-10">
-        <Card className="max-w-xs " imgSrc="public/images.jpg"  >
+        <Card className="max-w-xs " imgSrc={slide_img} >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Noteworthy technology acquisitions 2021
           </h5>
