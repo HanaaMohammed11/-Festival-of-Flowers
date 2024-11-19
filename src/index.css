@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+    background-color: rgba(250, 250, 175, 0.295)
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@200..1000&display=swap');
 

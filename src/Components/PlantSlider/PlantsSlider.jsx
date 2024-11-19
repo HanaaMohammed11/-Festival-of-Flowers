@@ -9,33 +9,53 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
 export default function PlantsSlider() {
+  const nav = useNavigate();
 
-  const nav=useNavigate()
+  const swiperStyles = {
+    width: '100%',
+    height: '100%',
+  };
+
+  const swiperSlideStyles = {
+    textAlign: 'center',
+    // fontSize: '18px',
+    // background: '#fff',
+    display: 'flex',
+    justifyContent: 'center',
+    // alignItems: 'center',
+    marginTop:"10%"
+  };
+
+  const swiperSlideImgStyles = {
+    display: 'block',
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  };
+
   return (
     <div className="plantscontainer relative text-center lg:mt-28 md:mt-28 sm:mt-6 mt-6 h-[500px]">
-      {/* <h1 className="section-heading lg:text-5xl md:text-5xl sm:text-4xl text-3xl mb-8">Our Plants</h1> */}
-
       {/* Controls */}
-      <div className="  flex justify-between items-center px-10 z-20">
-        {/* Previous Button */}
-        <div className='flex justify-between'>
-        <div className="swiper-prev cursor-pointer mr-4 text-green-600 hover:text-green-800 text-3xl">
-          <FaArrowAltCircleLeft />
+      <div className="flex justify-between items-center px-10 z-20">
+        <div className="flex justify-between">
+          {/* Previous Button */}
+          <div className="swiper-prev cursor-pointer mr-4 text-green-600 hover:text-green-800 text-3xl">
+            <FaArrowAltCircleLeft />
+          </div>
+
+          {/* Next Button */}
+          <div className="swiper-next cursor-pointer text-green-600 hover:text-green-800 text-3xl">
+            <FaArrowAltCircleRight />
+          </div>
         </div>
 
-
-        {/* Next Button */}
-        <div className="swiper-next cursor-pointer text-green-600 hover:text-green-800 text-3xl">
-          <FaArrowAltCircleRight />
-        </div>
-        </div>
-     
-
-        
         {/* More Button */}
-        <button onClick={()=>nav("/plants")} className="bg-green-700 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-green-600 text-sm sm:text-base">
-              See More
-            </button>
+        <button
+          onClick={() => nav('/plants')}
+          className="bg-green-700 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-green-600 text-sm sm:text-base"
+        >
+          See More
+        </button>
       </div>
 
       {/* Swiper */}
@@ -68,13 +88,23 @@ export default function PlantsSlider() {
         }}
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         className="w-full max-w-5xl"
+        style={swiperStyles} // Inline styles for Swiper
       >
         {/* Slides */}
         {[...Array(5)].map((_, index) => (
-          <SwiperSlide key={index} className="tranding-slide">
+          <SwiperSlide
+            key={index}
+            className="tranding-slide"
+            style={swiperSlideStyles} // Inline styles for SwiperSlide
+          >
             <div className="w-64 h-72 p-4 bg-white shadow-lg rounded-lg hover:text-black hover:bg-green-950/80">
               <div className="h-52 pb-5">
-                <img src={slide_img} alt={`Plant ${index}`} className="rounded-lg mb-4" />
+                <img
+                  src={slide_img}
+                  alt={`Plant ${index}`}
+                  className="rounded-lg mb-4"
+                  style={swiperSlideImgStyles} // Inline styles for image
+                />
               </div>
               <p className="font-semibold">Plant {index + 1}</p>
               <p className="text-green-600 font-semibold hover:text-black">$25</p>
@@ -82,8 +112,6 @@ export default function PlantsSlider() {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* <div className="swiper-pagination mt-16"></div> */}
     </div>
   );
 }
