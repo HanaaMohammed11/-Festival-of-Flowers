@@ -12,7 +12,7 @@ export default function Header() {
       ".hero-image",
       { y: 0, x: 0 },
       {
-        y: 700,  
+        y: 690,  
         x: 500,  
         scrollTrigger: {
           trigger: ".about",
@@ -41,22 +41,23 @@ export default function Header() {
 
   return (
     <div>
-      <div
-        className="min-h-screen flex flex-col items-center text-white justify-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(${headerImg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+   <div
+  className="min-h-screen flex flex-col items-center text-white justify-center animate-zoomBackground"
+  style={{
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(${headerImg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
+  }}
+>
+
         <div className="flex flex-col sm:flex-row bg-green-950/80 backdrop-blur-md items-center justify-center rounded-xl p-4 sm:p-8 lg:p-12 max-w-4xl w-full mx-4 lg:max-h-80 space-y-4 sm:space-y-0 sm:space-x-6">
           <img
             src={hero}
             alt="Hero"
             className="hero-image w-full sm:w-1/2 lg:-mt-52 -mt-32 sm:-mt-24 filter"
-            style={{ filter: "drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.9))" }}
+            style={{ filter: "drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.9))" }}
           />
           <div className="text-center z-10 w-full sm:w-1/2 px-4">
             <h1 className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">Decorate your Home with Plants</h1>
@@ -70,7 +71,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="about flex flex-col sm:flex-row mx-9 mt-20">
+      <div className="about flex flex-col sm:flex-row mx-9 mt-12">
         <div className="flex flex-col sm:flex-row rounded-xl p-4 sm:p-8 lg:p-12 w-full mx-4 lg:max-h-80 space-y-4 sm:space-y-0 sm:space-x-6">
           <div className="z-10 w-full sm:w-1/2 px-4">
             <h1 className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">Decorate your Home with Plants</h1>

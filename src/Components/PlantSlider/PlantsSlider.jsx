@@ -1,4 +1,3 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -6,21 +5,45 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import slide_img from './../../assets/plant3.jpg';
-import plant from '../../assets/plant2.jpg';
-import plant2 from '../../assets/plant4.jpg';
-import './PlantsSlider.modules.css';
-import { Card } from 'flowbite-react';
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 export default function PlantsSlider() {
+
+  const nav=useNavigate()
   return (
-    <div className="plantscontainer text-center">
-      <h1 className="section-heading">Our Plants</h1>
+    <div className="plantscontainer relative text-center lg:mt-28 md:mt-28 sm:mt-12 mt-12 h-[500px]">
+      <h1 className="section-heading lg:text-5xl md:text-5xl sm:text-4xl text-3xl mb-8">Our Plants</h1>
+
+      {/* Controls */}
+      <div className="  flex justify-between items-center px-10 z-20">
+        {/* Previous Button */}
+        <div className='flex justify-between'>
+        <div className="swiper-prev cursor-pointer mr-4 text-green-600 hover:text-green-800 text-3xl">
+          <FaArrowAltCircleLeft />
+        </div>
+
+
+        {/* Next Button */}
+        <div className="swiper-next cursor-pointer text-green-600 hover:text-green-800 text-3xl">
+          <FaArrowAltCircleRight />
+        </div>
+        </div>
+     
+
+        
+        {/* More Button */}
+        <button onClick={()=>nav("/plants")} className="bg-green-700 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-green-600 text-sm sm:text-base">
+              See More
+            </button>
+      </div>
+
+      {/* Swiper */}
       <Swiper
-        id="tranding"
         effect="coverflow"
         grabCursor={true}
         loop={true}
-        slidesPerView={3}
+        slidesPerView={4}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -39,75 +62,28 @@ export default function PlantsSlider() {
         }}
         pagination={{ el: '.swiper-pagination', clickable: true }}
         navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-next',
+          prevEl: '.swiper-prev',
           clickable: true,
         }}
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-        className="w-full max-w-4xl"
+        className="w-full max-w-5xl"
       >
-        <SwiperSlide className="tranding-slide">
-          <Card className="w-48">
-            <img src={slide_img} alt="Plant 1" />
-            <p className="slide-title">Calathea Roseopicta</p>
-            <p className="slide-price">$27</p>
-          </Card>
-        </SwiperSlide>   <SwiperSlide className="tranding-slide">
-          <Card className="w-48">
-            <img src={slide_img} alt="Plant 1" />
-            <p className="slide-title">Calathea Roseopicta</p>
-            <p className="slide-price">$27</p>
-          </Card>
-        </SwiperSlide>   <SwiperSlide className="tranding-slide">
-          <Card className="w-48">
-            <img src={slide_img} alt="Plant 1" />
-            <p className="slide-title">Calathea Roseopicta</p>
-            <p className="slide-price">$27</p>
-          </Card>
-        </SwiperSlide>   <SwiperSlide className="tranding-slide">
-          <Card className="w-48">
-            <img src={slide_img} alt="Plant 1" />
-            <p className="slide-title">Calathea Roseopicta</p>
-            <p className="slide-price">$27</p>
-          </Card>
-        </SwiperSlide>   <SwiperSlide className="tranding-slide">
-          <Card className="w-48">
-            <img src={slide_img} alt="Plant 1" />
-            <p className="slide-title">Calathea Roseopicta</p>
-            <p className="slide-price">$27</p>
-          </Card>
-        </SwiperSlide>   <SwiperSlide className="tranding-slide">
-          <Card className="w-48">
-            <img src={slide_img} alt="Plant 1" />
-            <p className="slide-title">Calathea Roseopicta</p>
-            <p className="slide-price">$27</p>
-          </Card>
-        </SwiperSlide>
-        <SwiperSlide className="tranding-slide">
-          <Card className="w-48">
-            <img src={plant} alt="Plant 2" />
-            <p className="slide-title">Cissus Rotundifolia</p>
-            <p className="slide-price">$25</p>
-          </Card>
-        </SwiperSlide>
-        <SwiperSlide className="tranding-slide">
-          <Card className="w-48">
-            <img src={plant2} alt="Plant 3" />
-            <p className="slide-title">Calathea Lancifolia</p>
-            <p className="slide-price">$27</p>
-          </Card>
-        </SwiperSlide>
-
-        <div className="tranding-slider-control">
-          <div className="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
-          </div>
-          <div className="swiper-button-next slider-arrow">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-          <div className="swiper-pagination"></div>
-        </div>
+        {/* Slides */}
+        {[...Array(5)].map((_, index) => (
+          <SwiperSlide key={index} className="tranding-slide">
+            <div className="w-64 h-72 p-4 bg-white shadow-lg rounded-lg hover:text-black hover:bg-green-950/80">
+              <div className="h-52 pb-5">
+                <img src={slide_img} alt={`Plant ${index}`} className="rounded-lg mb-4" />
+              </div>
+              <p className="font-semibold">Plant {index + 1}</p>
+              <p className="text-green-600 font-semibold hover:text-black">$25</p>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
+
+      {/* <div className="swiper-pagination mt-16"></div> */}
     </div>
   );
 }

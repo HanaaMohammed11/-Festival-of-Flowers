@@ -40,33 +40,42 @@ function Plants (){
  <div className="flex justify-between mt-20 container lg:mx-10 border-b-2 pb-5" >
   <div className='lg:w-[20%] sm:w-[30%] sm:ml-5'> 
     <div>
-      <h1 className="text-2xl font-bold mb-5">All Categories</h1>
-      <ul className="flex border-b-2 pb-5">
-        <div>
-        <li>Alpines </li>
-        <li>Cacti and succulents</li>
-        <li>Ferns</li>
-        <li>Aquatic and bog </li>
-        <li>Trees</li>
-        <li>Alpines </li>
-        <li>Cacti and succulents</li>
-        <li>Ferns</li>
-        <li>Aquatic and bog </li>
-        <li>Trees</li>
-        </div>
-        <div className="ml-20">
-        <li>20 </li>
-        <li>60</li>
-        <li>70</li>
-        <li>10</li>
-        <li>40</li>
-        <li>20 </li>
-        <li>60</li>
-        <li>70</li>
-        <li>10</li>
-        <li>40</li>
-        </div>
-      </ul>
+    <div>
+  <h1 className="text-2xl font-bold mb-5">All Categories</h1>
+  <ul className="space-y-2">
+    <li className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
+      <button className="flex justify-between w-full">
+        <span className="text-white dark:text-white font-medium">Alpines</span>
+        <span className="text-white dark:text-gray-300">20</span>
+      </button>
+    </li>
+    <li className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
+      <button className="flex justify-between w-full">
+        <span className="text-white dark:text-white font-medium">Cacti and succulents</span>
+        <span className="text-white dark:text-gray-300">60</span>
+      </button>
+    </li>
+    <li className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
+      <button className="flex justify-between w-full">
+        <span className="text-white dark:text-white font-medium">Ferns</span>
+        <span className="text-white dark:text-gray-300">70</span>
+      </button>
+    </li>
+    <li className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
+      <button className="flex justify-between w-full">
+        <span className="text-white dark:text-white font-medium">Aquatic and bog</span>
+        <span className="text-white dark:text-gray-300">10</span>
+      </button>
+    </li>
+    <li className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
+      <button className="flex justify-between w-full">
+        <span className="text-white dark:text-white font-medium">Trees</span>
+        <span className="text-white dark:text-gray-300">40</span>
+      </button>
+    </li>
+  </ul>
+</div>
+
       <div className="border-b-2 pb-5">
         <div className="mb-1 block mt-5">
           <Label htmlFor="sm-range" value="Fillter By Price" className="font-bold text-base"/>
@@ -119,15 +128,15 @@ function Plants (){
       <div className="mt-5">
         <h1 className="font-bold text-base mb-10">Popular Tags</h1>
         <div className="flex flex-row flex-wrap gap-3"> 
-        <p className="rounded-lg px-4 py-2 bg-lime-950 inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-lime-950 inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-lime-950 inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-lime-950 inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-lime-950 inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-lime-950 inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-lime-950 inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-lime-950 inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-lime-950 inline-block text-white">plant</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
         </div>
       </div>
     </div>
@@ -151,17 +160,17 @@ function Plants (){
         modules={[FreeMode, Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide><img src="public/473DA96E-6FB7-4643-BE54-36753F79B647_1440x.webp"/></SwiperSlide>
-        <SwiperSlide><img src="public/images (2).jpg"/></SwiperSlide>
-        <SwiperSlide><img src="public/istockphoto-1268045137-612x612.webp"/></SwiperSlide>
-        <SwiperSlide><img src="public/thumbnail-9c50c6a0f6d332867fe6f724b543e9c1-1140x618-1.jpeg" /></SwiperSlide>
-        <SwiperSlide><img src="public/nurserylive-combo-packs-plants-low-maintenance-indoor-plants-for-home-decoration-16969011855500_512x512.webp"  width={10}/></SwiperSlide>
-        <SwiperSlide><img src="public/Lucious-plants-in-interior-design-1.jpeg" /></SwiperSlide>
-        <SwiperSlide><img src="public/images (3).jpg"  /></SwiperSlide>
-        <SwiperSlide><img src="public/GettyImages-1404287433.webp"  /></SwiperSlide>      
-          <SwiperSlide><img src="public/images (4).jpg"  /></SwiperSlide>      
-          <SwiperSlide><img src="public/plumeria-for-sale.webp"  /></SwiperSlide>      
-          <SwiperSlide><img src="public/1527091860274.webp"  /></SwiperSlide>
+        <SwiperSlide><img src="public/473DA96E-6FB7-4643-BE54-36753F79B647_1440x.webp" className="rounded-lg"/></SwiperSlide>
+        <SwiperSlide><img src="public/images (2).jpg"className="rounded-lg"/></SwiperSlide>
+        <SwiperSlide><img src="public/istockphoto-1268045137-612x612.webp"className="rounded-lg"/></SwiperSlide>
+        <SwiperSlide><img src="public/thumbnail-9c50c6a0f6d332867fe6f724b543e9c1-1140x618-1.jpeg" className="rounded-lg" /></SwiperSlide>
+        <SwiperSlide><img src="public/nurserylive-combo-packs-plants-low-maintenance-indoor-plants-for-home-decoration-16969011855500_512x512.webp"   className="rounded-lg"/></SwiperSlide>
+        <SwiperSlide><img src="public/Lucious-plants-in-interior-design-1.jpeg" className="rounded-lg"/></SwiperSlide>
+        <SwiperSlide><img src="public/images (3).jpg" className="rounded-lg" /></SwiperSlide>
+        <SwiperSlide><img src="public/GettyImages-1404287433.webp" className="rounded-lg" /></SwiperSlide>      
+          <SwiperSlide><img src="public/images (4).jpg" className="rounded-lg" /></SwiperSlide>      
+          <SwiperSlide><img src="public/plumeria-for-sale.webp" className="rounded-lg" /></SwiperSlide>      
+          <SwiperSlide><img src="public/1527091860274.webp" className="rounded-lg" /></SwiperSlide>
       </Swiper>
  </div>
     </>)
