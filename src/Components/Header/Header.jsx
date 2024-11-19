@@ -78,9 +78,6 @@ export default function Header() {
             <p className="text-sm sm:text-base mb-4 sm:mb-6">
               Place your order with us and get the best plants delivered to decorate your space.
               Place your order with us and get the best plants delivered to decorate your space.
-              Place your order with us and get the best plants delivered to decorate your space.
-              Place your order with us and get the best plants delivered to decorate your space.
-              Place your order with us and get the best plants delivered to decorate your space.
             </p>
             <button className="bg-green-700 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-green-600 text-sm sm:text-base">
               Show more
