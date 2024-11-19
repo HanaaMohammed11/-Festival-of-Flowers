@@ -12,7 +12,7 @@ export default function Header() {
       ".hero-image",
       { y: 0, x: 0 },
       {
-        y: 690,  
+        y: 670,  
         x: 500,  
         scrollTrigger: {
           trigger: ".about",
@@ -71,7 +71,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="about flex flex-col sm:flex-row mx-9 lg:mt-12 md:mt-12 sm:mt-6 mt-6">
+      <div className="about flex flex-col sm:flex-row mx-9 lg:mt-12 md:mt-12 sm:mt-3 mt-3">
         <div className="flex flex-col sm:flex-row rounded-xl p-4 sm:p-8 lg:p-12 w-full mx-4 lg:max-h-80 space-y-4 sm:space-y-0 sm:space-x-6">
           <div className="z-10 w-full sm:w-1/2 px-4">
             <h1 className="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">Decorate your Home with Plants</h1>
