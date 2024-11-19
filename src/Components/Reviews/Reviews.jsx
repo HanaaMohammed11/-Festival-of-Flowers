@@ -1,6 +1,6 @@
 export default function Reviews() {
     return (
-      <div className="container mx-auto px-4 mb-10 lg:mt-20 md:mt-20 sm:mt-20 mt-20">
+      <div className="container mx-auto px-4 mb-10 lg:mt-20 md:mt-20 sm:mt-16 mt-16">
         <button className="bg-green-700   my-7 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-green-600 text-sm sm:text-base">
           See More
         </button>

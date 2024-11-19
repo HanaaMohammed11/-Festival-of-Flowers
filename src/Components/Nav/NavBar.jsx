@@ -29,6 +29,7 @@ export default function NavBar() {
           </span>
         </Navbar.Brand>
 
+        {/* زر القائمة في الشاشات الصغيرة */}
         <button
           className="text-amber-100 md:hidden focus:outline-none"
           onClick={toggleNavbar}
@@ -44,17 +45,51 @@ export default function NavBar() {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              // d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-              d={"M4 6h16M4 12h16M4 18h16"}
+              d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
         </button>
+
+        {/* القائمة في الشاشات الكبيرة */}
+        <nav className="hidden md:flex space-x-8">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/plants"
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+            Plants
+          </NavLink>
+          <NavLink
+            to="/tools"
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+            Tools
+          </NavLink>
+        </nav>
       </div>
 
+      {/* القائمة الجانبية للشاشات الصغيرة */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-green-950/90 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out z-50`}
+        } transition-transform duration-300 ease-in-out z-50 `}
       >
         <button
           className="text-white absolute top-4 right-4"
