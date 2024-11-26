@@ -19,7 +19,10 @@ export default {
       animation: {
         zoomBackground: 'zoomBackground 10s ease-in-out infinite', 
       },
-      
+      screens: {
+        xs: { max: '639px' }, 
+        xxs:{max:'420px'}
+      },
     },
 
   },
