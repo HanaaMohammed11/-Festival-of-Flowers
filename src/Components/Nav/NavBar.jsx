@@ -2,7 +2,7 @@ import { Navbar } from "flowbite-react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import logo from "../../assets/logo.png";
-
+import { FaCartShopping } from "react-icons/fa6";
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -82,6 +82,16 @@ export default function NavBar() {
           >
             Tools
           </NavLink>
+          <NavLink
+            to="/cart"
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+            <FaCartShopping size={20} className="mt-1"/>
+          </NavLink>
         </nav>
       </div>
 
@@ -143,6 +153,16 @@ export default function NavBar() {
             }
           >
             Tools
+          </NavLink>
+          <NavLink
+            to="/cart"
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+          Cart
           </NavLink>
         </nav>
       </div>
