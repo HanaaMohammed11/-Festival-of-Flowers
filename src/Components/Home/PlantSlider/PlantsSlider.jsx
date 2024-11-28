@@ -4,16 +4,20 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
-import slide_img from './../../assets/plant3.jpg';
+import slide_img from '../../../assets/plant3.jpg';
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import hero from "../../../assets/ab61497a-3d00-4508-82f9-69f34d3596b9.png";
+import leves from "../../../assets/59a36e7ff3603bd4b72de0ac45944418-removebg-preview.png";
+import { useEffect, useRef, useState } from 'react';
+
 
 export default function PlantsSlider() {
   const nav = useNavigate();
 
   const swiperStyles = {
-    width: '100%',
-    height: '100%',
+    // width: '100%',
+    // height: '100%',
   };
 
   const swiperSlideStyles = {
@@ -23,7 +27,7 @@ export default function PlantsSlider() {
     display: 'flex',
     justifyContent: 'center',
     // alignItems: 'center',
-    marginTop:"14%"
+    marginTop:"1%"
   };
 
   const swiperSlideImgStyles = {
@@ -32,31 +36,53 @@ export default function PlantsSlider() {
     height: '100%',
     objectFit: 'cover',
   };
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true); }
+        //    else {
+        //   setIsVisible(false); 
+        // }
+      },
+      { threshold: 1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
 
   return (
-    <div className="plantscontainer relative text-center lg:mt-28 md:mt-28 sm:mt-6 mt-6 h-[500px]">
-      {/* Controls */}
-      <div className="flex justify-between items-center px-10 z-20">
+    <div      ref={sectionRef} className={`plantscontainer  font-cairo text-[#375840] relative text-center lg:mt-28 md:mt-28 sm:mt-6 mt-6  ${isVisible ? "animate-fadeInUp" : "opacity-0" } transition-opacity duration-500`}>
+     
+     <h1  className={`text-4xl   transform transition-all mb-10  duration-700
+        
+        `}>
+ 🌱  نباتاتنا         </h1>   
+
+  {/* Controls */}
+      {/* <div className="flex justify-between items-center px-10 z-20">
         <div className="flex justify-between">
-          {/* Previous Button */}
           <div className="swiper-prev cursor-pointer mr-4 text-green-600 hover:text-green-800 text-3xl">
             <FaArrowAltCircleLeft />
           </div>
 
-          {/* Next Button */}
           <div className="swiper-next cursor-pointer text-green-600 hover:text-green-800 text-3xl">
             <FaArrowAltCircleRight />
           </div>
         </div>
 
-        {/* More Button */}
-        <button
-          onClick={() => nav('/plants')}
-          className="bg-green-700 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-green-600 text-sm sm:text-base"
-        >
-          See More
-        </button>
-      </div>
+      
+      </div> */}
 
       {/* Swiper */}
       <Swiper
@@ -88,22 +114,22 @@ export default function PlantsSlider() {
         }}
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         className="w-full max-w-5xl"
-        style={swiperStyles} // Inline styles for Swiper
+        style={swiperStyles}
       >
+        
         {/* Slides */}
         {[...Array(5)].map((_, index) => (
           <SwiperSlide
             key={index}
             className="tranding-slide"
-            style={swiperSlideStyles} // Inline styles for SwiperSlide
-          >
-            <div className="w-64 h-72 p-4 bg-white shadow-lg rounded-lg hover:text-black hover:bg-green-950/80">
+            style={{ background: 'transparent' }}          >
+            <div className="w-64  p-4  shadow-lg rounded-lg hover:text-black hover:bg-green-950/80">
               <div className="h-52 pb-5">
                 <img
                   src={slide_img}
                   alt={`Plant ${index}`}
                   className="rounded-lg mb-4"
-                  style={swiperSlideImgStyles} // Inline styles for image
+                  style={swiperSlideImgStyles} 
                 />
               </div>
               <p className="font-semibold">Plant {index + 1}</p>
@@ -112,6 +138,35 @@ export default function PlantsSlider() {
           </SwiperSlide>
         ))}
       </Swiper>
+      <img
+        src={leves}
+        alt=""
+        className="w-16 absolute top-0 lg:right-52  sm:right-0  right-0   z-0 md:w-16 lg:w-16 xl:w-16"
+        style={{
+          filter: "drop-shadow(0px 12px 10px rgba(0, 0, 0, 0.9))",
+        }}
+      />
+      <button
+          onClick={() => nav('/plants')}
+          className=  "bg-green-700 font-cairo mt-10 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-green-600 text-sm sm:text-base"
+        >
+رؤية المزيد        </button>
+<img
+        src={leves}
+        alt=""
+        className="w-5 absolute top-64    z-0 md:w-16 lg:w-16 xl:w-16"
+        style={{
+          filter: "drop-shadow(0px 12px 10px rgba(0, 0, 0, 0.9))",
+        }}
+      />
+      {/* <img
+        src={leves}
+        alt=""
+        className="w-5 absolute top-96 right-20    z-0 md:w-16 lg:w-16 xl:w-16"
+        style={{
+          filter: "drop-shadow(0px 12px 10px rgba(0, 0, 0, 0.9))",
+        }}
+      /> */}
     </div>
   );
 }
