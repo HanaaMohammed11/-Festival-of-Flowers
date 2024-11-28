@@ -12,7 +12,7 @@ export default function Aboutus() {
         if (entry.isIntersecting) {
           setIsVisible(true); }
       },
-      { threshold: 1 }
+      { threshold: .5 }
     );
 
     if (sectionRef.current) {

@@ -48,7 +48,7 @@ export default function PlantsSlider() {
         //   setIsVisible(false); 
         // }
       },
-      { threshold: 1 }
+      { threshold: .5 }
     );
 
     if (sectionRef.current) {

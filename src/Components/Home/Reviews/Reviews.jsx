@@ -159,7 +159,7 @@ export default function Reviews() {
         //   setIsVisible(false); 
         // }
       },
-      { threshold: 1 }
+      { threshold: .5 }
     );
 
     if (sectionRef.current) {
