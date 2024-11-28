@@ -273,14 +273,14 @@ export default function Reviews() {
         }}
       />
 
-<img
+{/* <img
         src={leves}
         alt=""
         className="w-5 absolute top-64    z-0 md:w-16 lg:w-16 xl:w-16"
         style={{
           filter: "drop-shadow(0px 12px 10px rgba(0, 0, 0, 0.9))",
         }}
-      />
+      /> */}
       <img
         src={leves}
         alt=""

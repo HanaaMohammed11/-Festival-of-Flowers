@@ -86,14 +86,14 @@ export default function Aboutus() {
       </div>
 
       {/* Positioning the third image */}
-      <img
+      {/* <img
         src={leves}
         alt=""
         className="w-10 absolute top-64 left-10 z-0 md:w-12 lg:w-12 xl:w-12"
         style={{
           filter: "drop-shadow(0px 12px 10px rgba(0, 0, 0, 0.9))",
         }}
-      />
+      /> */}
       <FeaturesCards />
       {/* <img
         src={leves}
