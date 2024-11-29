@@ -27,7 +27,7 @@ export default function Aboutus() {
   return (
     <div
       ref={sectionRef}
-      className={`text-center font-cairo relative ${
+      className={`text-center font-cairo relative overflow-hidden ${
         isVisible ? "animate-fadeInUp" : "opacity-0"
       } transition-opacity duration-500`}
     >
