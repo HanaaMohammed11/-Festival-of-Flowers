@@ -13,7 +13,7 @@ import './styles.css';
 
 // import required modules
 import { FreeMode, Autoplay } from 'swiper/modules';
-import Cards from "../../Components/cards/Cards";
+import Cards from "../../Components/Plants/cards/Cards";
 function Plants (){
   const [currentPage, setCurrentPage] = useState(1);
 

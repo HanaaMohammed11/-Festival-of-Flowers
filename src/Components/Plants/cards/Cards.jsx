@@ -1,6 +1,6 @@
 import { Card } from "flowbite-react";
 import { Link } from "react-router-dom";
-import slide_img from './../../assets/plant3.jpg';
+import slide_img from '../../../assets/plant3.jpg';
 
 function Cards() {
   return (
