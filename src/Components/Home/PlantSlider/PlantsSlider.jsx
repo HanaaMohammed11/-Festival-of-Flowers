@@ -123,7 +123,7 @@ export default function PlantsSlider() {
             key={index}
             className="tranding-slide"
             style={{ background: 'transparent' }}          >
-            <div className="w-64  p-4  shadow-lg rounded-lg hover:text-black hover:bg-green-950/80">
+            <div className="w-64 bg-white  p-4  shadow-lg rounded-lg hover:text-black hover:bg-green-950/80">
               <div className="h-52 pb-5">
                 <img
                   src={slide_img}
