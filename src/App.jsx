@@ -6,6 +6,7 @@ import Plants from './Pages/plants/Plants';
 import NavBar from './Components/Nav/NavBar';
 import Footer from './Components/Footer/Footer';
 import Detilesplant from './Pages/detiles/Detilesplant';
+import Cart from './Pages/cart/Cart';
 function App() {
   
 
@@ -16,6 +17,7 @@ function App() {
       <Route path='/' element={<Home />}/>
       <Route path='/plants' element={<Plants />}/>
       <Route path='/detiles' element={<Detilesplant />}/>
+      <Route path='/cart' element={<Cart/>}/>
     </Routes>
     <Footer/>
     </>

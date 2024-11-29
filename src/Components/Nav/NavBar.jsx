@@ -154,6 +154,7 @@
 
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { FaCartShopping } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";
 import { RiPlantLine } from "react-icons/ri";
 import { PiShovelFill } from "react-icons/pi";
@@ -173,6 +174,7 @@ export default function NavBar() {
 
   return (
     <>
+      {/* Desktop Navigation */}
       <nav className="hidden md:flex justify-between items-center bg-green-950/80 px-4 py-2">
         <div className="flex items-center">
           <div className="w-9 h-9">
@@ -216,9 +218,20 @@ export default function NavBar() {
           >
             Tools
           </NavLink>
+          <NavLink
+            to="/cart"
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+            <FaCartShopping size={20} className="mt-1" />
+          </NavLink>
         </div>
       </nav>
 
+      {/* Mobile Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 bg-green-950 z-50 md:hidden flex justify-between items-center px-4 py-2">
         <NavLink
           to="/"
@@ -253,7 +266,6 @@ export default function NavBar() {
           <PiShovelFill color="#ffff" />
           <span className="text-xs">أدواتك</span>
         </NavLink>
-
         <button
           onClick={toggleSidebar}
           className="text-white hover:text-amber-100 flex flex-col items-center"
@@ -263,6 +275,7 @@ export default function NavBar() {
         </button>
       </nav>
 
+      {/* Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-green-950 z-50 transform ${
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
