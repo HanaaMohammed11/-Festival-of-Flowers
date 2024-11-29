@@ -101,7 +101,6 @@ export default function PlantsSlider() {
         }}
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         className="w-full max-w-5xl"
-        style={swiperStyles}
       >
         
         {/* Slides */}
