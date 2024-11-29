@@ -232,6 +232,21 @@ export default function NavBar() {
       </nav>
 
       {/* Mobile Navigation */}
+      <nav className="block md:hiddin justify-center text-center items-center bg-green-950/80 px-4 py-2">
+        <div className="flex items-center justify-center">
+          <div className="w-6 h-6">
+            <img src={logo} alt="Festival of Flowers Logo" />
+          </div>
+          <span
+            className="font-semibold px-2 text-amber-100"
+            style={{ fontFamily: "Abril Fatface, serif" }}
+          >
+            Festival of Flowers
+          </span>
+        </div>
+     
+     
+      </nav>
       <nav className="fixed bottom-0 left-0 right-0 bg-green-950 z-50 md:hidden flex justify-between items-center px-4 py-2">
         <NavLink
           to="/"
