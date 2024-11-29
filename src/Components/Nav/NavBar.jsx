@@ -175,7 +175,7 @@ export default function NavBar() {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex justify-between items-center bg-green-950/80 px-4 py-2">
+      <nav className="hidden md:flex justify-between items-center bg-green-950/80 px-4 py-2 font-cairo">
         <div className="flex items-center">
           <div className="w-9 h-9">
             <img src={logo} alt="Festival of Flowers Logo" />
@@ -188,37 +188,7 @@ export default function NavBar() {
           </span>
         </div>
         <div className="flex space-x-8">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive
-                ? "text-amber-100 font-bold"
-                : "text-white hover:text-amber-100"
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/plants"
-            className={({ isActive }) =>
-              isActive
-                ? "text-amber-100 font-bold"
-                : "text-white hover:text-amber-100"
-            }
-          >
-            Plants
-          </NavLink>
-          <NavLink
-            to="/tools"
-            className={({ isActive }) =>
-              isActive
-                ? "text-amber-100 font-bold"
-                : "text-white hover:text-amber-100"
-            }
-          >
-            Tools
-          </NavLink>
-          <NavLink
+        <NavLink
             to="/cart"
             className={({ isActive }) =>
               isActive
@@ -228,11 +198,42 @@ export default function NavBar() {
           >
             <FaCartShopping size={20} className="mt-1" />
           </NavLink>
+          <NavLink
+            to="/plants"
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+            نباتات
+          </NavLink>
+          <NavLink
+            to="/tools"
+            className={({ isActive  }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+            ادوات زراعية
+          </NavLink>
+      
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+            الرئيسية
+          </NavLink>
         </div>
       </nav>
 
       {/* Mobile Navigation */}
-      <nav className="block md:hiddin justify-center text-center items-center bg-green-950/80 px-4 py-2">
+      <nav className="block md:hidden lg:hidden  justify-center text-center items-center bg-green-950/80 px-4 py-2">
         <div className="flex items-center justify-center">
           <div className="w-6 h-6">
             <img src={logo} alt="Festival of Flowers Logo" />
@@ -247,7 +248,7 @@ export default function NavBar() {
      
      
       </nav>
-      <nav className="fixed bottom-0 left-0 right-0 bg-green-950 z-50 md:hidden flex justify-between items-center px-4 py-2">
+      <nav className="fixed font-cairo bottom-0 left-0 right-0 bg-green-950 z-50 md:hidden flex justify-between items-center px-4 py-2">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -257,7 +258,7 @@ export default function NavBar() {
           }
         >
           <FaHome color="#ffff" />
-          <span className="text-xs">الرئيسة</span>
+          <span className="text-xs">الرئيسية</span>
         </NavLink>
         <NavLink
           to="/plants"
@@ -268,7 +269,7 @@ export default function NavBar() {
           }
         >
           <RiPlantLine color="#ffff" />
-          <span className="text-xs">نباتك</span>
+          <span className="text-xs">نباتات</span>
         </NavLink>
         <NavLink
           to="/tools"
@@ -279,7 +280,7 @@ export default function NavBar() {
           }
         >
           <PiShovelFill color="#ffff" />
-          <span className="text-xs">أدواتك</span>
+          <span className="text-xs">ادوات زراعية</span>
         </NavLink>
         <button
           onClick={toggleSidebar}
