@@ -12,7 +12,7 @@ function ToolsSideBar() {
     <div className="font-cairo ">
       <div className="flex-col md:flex-row sm:flex xxs:flex-col xs:flex-col lg:flex-row  ">
         {/* Fixed Sidebar */}
-        <div className="w-[20%] fixed z-10 lg:right-0 xs:right-20 xxs:right-32  md:right-0 p-5">
+        <div className="w-[20%]  z-10 lg:right-0 xs:right-20 xxs:right-32  md:right-0 p-5">
           <div>
             <h1 className="font-semibold mb-5 text-right lg:text-xl md:text-xl sm:text-md text-md lg:block md:block sm:hidden hidden xl:block">التصنيفات</h1>
 
