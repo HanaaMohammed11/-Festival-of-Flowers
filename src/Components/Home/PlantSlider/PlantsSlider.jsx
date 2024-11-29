@@ -15,21 +15,8 @@ import { useEffect, useRef, useState } from 'react';
 export default function PlantsSlider() {
   const nav = useNavigate();
 
-  const swiperStyles = {
-    // width: '100%',
-    // height: '100%',
-  };
 
-  const swiperSlideStyles = {
-    textAlign: 'center',
-    // fontSize: '18px',
-    // background: '#fff',
-    display: 'flex',
-    justifyContent: 'center',
-    // alignItems: 'center',
-    marginTop:"1%"
-  };
-
+ 
   const swiperSlideImgStyles = {
     display: 'block',
     width: '100%',

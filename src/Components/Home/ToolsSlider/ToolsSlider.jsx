@@ -9,7 +9,6 @@ import {
   Navigation,
   Autoplay,
 } from "swiper/modules";
-import slide_img from "../../../assets/plant3.jpg";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import hero from "../../../assets/ab61497a-3d00-4508-82f9-69f34d3596b9.png";
