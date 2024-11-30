@@ -197,6 +197,17 @@ export default function NavBar() {
             }
           >
             <FaCartShopping size={20} className="mt-1" />
+         
+          </NavLink>
+          <NavLink
+            to="/pricing"
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+            الاشتراكات
           </NavLink>
           <NavLink
             to="/plants"
@@ -321,35 +332,53 @@ export default function NavBar() {
           <NavLink
             to="/cart"
             onClick={closeSidebar}
-            className="text-white hover:text-amber-100"
-          >
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }          >
             السلة
           </NavLink>
           <NavLink
             to="/about"
             onClick={closeSidebar}
-            className="text-white hover:text-amber-100"
-          >
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }          >
             من نحن
           </NavLink>
           <NavLink
             to="/orders"
             onClick={closeSidebar}
-            className="text-white hover:text-amber-100"
-          >
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }          >
             طلباتك
           </NavLink>
           <NavLink
-            to="/support"
+            to="/pricing"
             onClick={closeSidebar}
-            className="text-white hover:text-amber-100"
+
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
           >
-            الدعم
+            الاشتراكات
           </NavLink>
           <NavLink
             to="/contact"
             onClick={closeSidebar}
-            className="text-white hover:text-amber-100"
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
           >
             تواصل معنا
           </NavLink>
