@@ -28,6 +28,22 @@ export default function PricingCards() {
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400 font-cairo">
              للاشتراك في الباقة الشهرية يرجي دفع المبلغ علي محفظة فودافون كاش الي الرقم المرفق (+201090955882) ومن ثم ارفاق صورة باتمام عميلة التحويل ورفعها في حقل الادخال
             </p>
+            <div className='flex-col'>
+            <label className='text-right font-cairo mx-4'> الاسم رباعي</label>
+
+            <input
+          className="rounded-full w-52 h-7 pr-2  text-right border-2 border-green-900 "
+        />
+            </div>
+            <div className=''>
+            <label className='text-right font-cairo mx-4'> رقم الهاتف </label>
+
+            <input
+          className="rounded-full w-52 h-7 pr-2  text-right border-2 border-green-900 "
+        />
+            </div>
+        
+      
             <Label
         htmlFor="dropzone-file"
         className="flex h-52 w-52 m-auto cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:border-gray-500 dark:hover:bg-gray-600"
