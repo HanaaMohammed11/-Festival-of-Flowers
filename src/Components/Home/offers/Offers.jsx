@@ -1,7 +1,8 @@
-import React from "react";
 import bg from "../../../assets/header.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function Offers() {
+  const nav=useNavigate();
   return (
     <div
       className="flex justify-center text-center items-center mt-10"
@@ -23,7 +24,7 @@ export default function Offers() {
           <br></br> تعرف الان علي عروضنا
         </p>
         <button
-    
+    onClick={()=>nav("/pricing")}
           className=  "bg-green-700 font-cairo mt-10 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-green-600 text-sm sm:text-base"
         >
 رؤية المزيد        </button>

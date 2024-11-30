@@ -7,8 +7,9 @@ import NavBar from './Components/Nav/NavBar';
 import Footer from './Components/Footer/Footer';
 import Detilesplant from './Pages/detiles/Detilesplant';
 import Cart from './Pages/cart/Cart';
-import Loader from './Components/LOADERS/Intro';
+import Loader from './Components/LOADERS/Loader';
 import Tools from './Pages/Tools/Tools';
+import Pricing from './Pages/Pricing/Pricing';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -33,6 +34,8 @@ function App() {
       <Route path='/detiles' element={<Detilesplant />}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/tools' element={<Tools/>}/>
+      <Route path='/pricing' element={<Pricing/>}/>
+
 
     </Routes>
     <Footer/>
