@@ -200,6 +200,27 @@ export default function NavBar() {
          
           </NavLink>
           <NavLink
+            to="/contactus"
+            onClick={closeSidebar}
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+            تواصل معنا
+          </NavLink>
+          <NavLink
+            to="/aboutus"
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+          عن شركتنا
+          </NavLink>
+          <NavLink
             to="/pricing"
             className={({ isActive }) =>
               isActive
@@ -340,7 +361,7 @@ export default function NavBar() {
             السلة
           </NavLink>
           <NavLink
-            to="/about"
+            to="/aboutus"
             onClick={closeSidebar}
             className={({ isActive }) =>
               isActive
@@ -349,16 +370,7 @@ export default function NavBar() {
             }          >
             من نحن
           </NavLink>
-          <NavLink
-            to="/orders"
-            onClick={closeSidebar}
-            className={({ isActive }) =>
-              isActive
-                ? "text-amber-100 font-bold"
-                : "text-white hover:text-amber-100"
-            }          >
-            طلباتك
-          </NavLink>
+       
           <NavLink
             to="/pricing"
             onClick={closeSidebar}
@@ -372,7 +384,7 @@ export default function NavBar() {
             الاشتراكات
           </NavLink>
           <NavLink
-            to="/contact"
+            to="/contactus"
             onClick={closeSidebar}
             className={({ isActive }) =>
               isActive

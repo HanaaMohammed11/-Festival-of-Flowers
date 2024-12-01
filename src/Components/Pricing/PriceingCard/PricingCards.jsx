@@ -22,27 +22,33 @@ export default function PricingCards() {
                 اشترك الان
               </button>
               <Modal  show={openModal} onClose={() => setOpenModal(false)} className='flex justify-center items-center text-center bg-green-950'>
-        <Modal.Header className='text-right font-cairo text-[#375840]'>الاشتراك في الباقة</Modal.Header>
+        <Modal.Header className='text-right font-cairo text-[#375840] items-center flex justify-center'>الاشتراك في الباقة</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400 font-cairo">
              للاشتراك في الباقة الشهرية يرجي دفع المبلغ علي محفظة فودافون كاش الي الرقم المرفق (+201090955882) ومن ثم ارفاق صورة باتمام عميلة التحويل ورفعها في حقل الادخال
             </p>
-            <div className='flex-col'>
-            <label className='text-right font-cairo mx-4'> الاسم رباعي</label>
+            <div className='flex lg:flex md:flex sm:flex xs:flex-col xxs:flex-col justify-center gap-5'>
+            <div className="flex flex-col items-end space-y-2">
+            <label htmlFor="Fullname" className='text-right font-cairo mx-4'>: الاسم رباعي</label>
+         
 
             <input
-          className="rounded-full w-52 h-7 pr-2  text-right border-2 border-green-900 "
+                 id="Fullname"
+          className="rounded-full w-52 h-7 pr-2  text-right border-2 bg-[#21863c2c] "
         />
-            </div>
-            <div className=''>
-            <label className='text-right font-cairo mx-4'> رقم الهاتف </label>
+        </div>
+            <div className="flex flex-col items-end space-y-2">
+            <label htmlFor="phone" className='text-right font-cairo mx-4'>: رقم الهاتف </label>
+         
 
             <input
-          className="rounded-full w-52 h-7 pr-2  text-right border-2 border-green-900 "
+                 id="phone"
+          className="rounded-full w-52 h-7 pr-2  text-right border-2 bg-[#21863c2c] "
         />
-            </div>
-        
+        </div>
+         
+        </div>
       
             <Label
         htmlFor="dropzone-file"
