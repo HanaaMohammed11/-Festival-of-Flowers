@@ -27,7 +27,7 @@ export default function Aboutus() {
   return (
     <div
       ref={sectionRef}
-      className={`text-center font-cairo relative ${
+      className={`text-center font-cairo relative overflow-hidden ${
         isVisible ? "animate-fadeInUp" : "opacity-0"
       } transition-opacity duration-500`}
     >
@@ -52,7 +52,7 @@ export default function Aboutus() {
         <div className="flex flex-col sm:flex-col mx-4 lg:max-h-80">
           <div className="z-10 w-full px-4 text-[#375840]">
             <h1
-              className={`text-4xl mb-7 transform transition-all duration-700 ${
+              className={`lg:text-4xl md:text-3xl sm:text-xl text-xl  mb-7 transform transition-all duration-700 ${
                 isVisible ? "translate-x-0 opacity-100" : "-translate-x-20 opacity-0"
               }`}
             >

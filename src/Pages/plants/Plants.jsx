@@ -13,7 +13,7 @@ import './styles.css';
 
 // import required modules
 import { FreeMode, Autoplay } from 'swiper/modules';
-import Cards from "../../Components/cards/Cards";
+import Cards from "../../Components/Plants/cards/Cards";
 function Plants (){
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -24,52 +24,52 @@ function Plants (){
         style={{
           backgroundImage: `url(${head})`,
         }}>
-      <h1 className="text-center text-6xl text-white pt-12">Shop Products</h1>
+      <h1 className="text-center text-6xl text-white pt-12">زين بيتك بنباتتنا</h1>
  </div>
  <div className="bg-zinc-300 h-[10vh] flex justify-center">
  <div className="relative pt-5 w-[30%] ">
   <input 
-    className="rounded-lg w-full h-7 pl-2 " 
-    placeholder="Search..."
+    className="rounded-lg w-full h-7 pl-2 text-right " 
+    placeholder="بحث "
   />
-  <span className="absolute right-5 top-9 transform -translate-y-1/2 text-gray-500">
+  <span className="absolute left-5 top-9 transform -translate-y-1/2 text-gray-500">
   <CiSearch />
   </span>
 </div>
  </div>
- <div className="flex justify-between mt-20 container lg:mx-10 border-b-2 pb-5" >
+ <div className="flex justify-between mt-20 container lg:mx-5 border-b-2 pb-20" >
   <div className='lg:w-[20%] sm:w-[30%] sm:ml-5'> 
     <div>
     <div>
-  <h1 className="text-2xl font-bold mb-5">All Categories</h1>
+  <h1 className="text-2xl font-bold mb-5 text-right">التصنيفات</h1>
   <ul className="space-y-2">
-    <li className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
+    <li dir="rtl" className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
       <button className="flex justify-between w-full">
-        <span className="text-white dark:text-white font-medium">Alpines</span>
-        <span className="text-white dark:text-gray-300">20</span>
+        <span className="text-white dark:text-white font-medium text-right">النباتات العشبيه</span>
+        <span className="text-white dark:text-gray-300 text-left">20</span>
       </button>
     </li>
-    <li className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
+    <li dir="rtl" className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
       <button className="flex justify-between w-full">
-        <span className="text-white dark:text-white font-medium">Cacti and succulents</span>
+        <span className="text-white dark:text-white font-medium">الشجيرات الصغيره</span>
         <span className="text-white dark:text-gray-300">60</span>
       </button>
     </li>
-    <li className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
+    <li dir="rtl" className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
       <button className="flex justify-between w-full">
-        <span className="text-white dark:text-white font-medium">Ferns</span>
+        <span className="text-white dark:text-white font-medium">الاشجار</span>
         <span className="text-white dark:text-gray-300">70</span>
       </button>
     </li>
-    <li className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
+    <li  dir="rtl" className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
       <button className="flex justify-between w-full">
-        <span className="text-white dark:text-white font-medium">Aquatic and bog</span>
+        <span className="text-white dark:text-white font-medium">النباتات المتسلقه</span>
         <span className="text-white dark:text-gray-300">10</span>
       </button>
     </li>
-    <li className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
+    <li dir="rtl" className="flex justify-between items-center bg-[#375744] dark:bg-gray-700  dark:hover:bg-gray-600 p-2 rounded-lg cursor-pointer transition-all duration-300">
       <button className="flex justify-between w-full">
-        <span className="text-white dark:text-white font-medium">Trees</span>
+        <span className="text-white dark:text-white font-medium">النباتات الزاحفه</span>
         <span className="text-white dark:text-gray-300">40</span>
       </button>
     </li>
@@ -77,78 +77,64 @@ function Plants (){
 </div>
 
       <div className="border-b-2 pb-5">
-        <div className="mb-1 block mt-5">
-          <Label htmlFor="sm-range" value="Fillter By Price" className="font-bold text-base"/>
+        <div dir="rtl" className="mb-1 block mt-5">
+          <Label htmlFor="sm-range" value="تصفية حسب السعر" className="font-bold text-base "/>
         </div>
         <RangeSlider id="sm-range" sizing="sm" />
-        <div className="flex justify-between">
+        <div   className="flex justify-between">
         <p>0</p>
         <p>500</p>
         </div>
       </div>
-      <div className="mt-5 border-b-2 pb-10">
-        <h1 className="font-bold text-base mb-10">Featured Products</h1>
-        <div className="flex justify-around mb-5 shadow-lg rounded-lg p-4 bg-white ">
+      <div dir="rtl" className="mt-5 ">
+        <h1 className="font-bold text-base mb-5">المنتجات المميزة</h1>
+        <div className="flex justify-between mb-5 shadow-lg rounded-lg p-4 bg-white ">
+        <div dir="rtl" className="pt-3">
+          <h1 className="text-right">نبات</h1>
+          <h1 className="text-right"> 200  ج</h1>
+        </div>
         <div> 
           <img src="public/1603744971592.webp"className=" rounded-full" width={90}/>
         </div>
-        <div>
-          <h1>plant1</h1>
-          <h1>200 El</h1>
+        </div>
+        <div className="flex justify-between mb-5 shadow-lg rounded-lg p-4 bg-white ">
+        <div dir="rtl" className="pt-3">
+          <h1 className="text-right">نبات</h1>
+          <h1 className="text-right"> 200  ج</h1>
+        </div>
+        <div> 
+          <img src="public/1603744971592.webp"className=" rounded-full" width={90}/>
         </div>
         </div>
-        <div className="flex justify-around mb-10 shadow-lg rounded-lg p-4 bg-white">
-        <div>
-          <img src="public/images.jpg"className=" rounded-full" width={100}/>
+        <div className="flex justify-between mb-5 shadow-lg rounded-lg p-4 bg-white ">
+        <div dir="rtl" className="pt-3">
+          <h1 className="text-right">نبات</h1>
+          <h1 className="text-right"> 200  ج</h1>
         </div>
-        <div>
-          <h1>plant1</h1>
-          <h1>200 El</h1>
-        </div>
-        </div>
-        <div className="flex justify-around mb-10 shadow-lg rounded-lg p-4 bg-white">
-        <div>
-          <img src="public/pNug7bBksRVsL54EEE5Wu9.jpg"className=" rounded-full" width={100}/>
-        </div>
-        <div>
-          <h1>plant1</h1>
-          <h1>200 El</h1>
+        <div> 
+          <img src="public/1603744971592.webp"className=" rounded-full" width={90}/>
         </div>
         </div>
-        <div className="flex justify-around shadow-lg rounded-lg p-4 bg-white ">
-        <div>
-          <img src="public/black-prince-coleus-coleus-scutellarioides-shutterstock-com_18251.jpg" className=" rounded-full" width={90}/>
-        </div>
-        <div>
-          <h1>plant1</h1>
-          <h1>200 El</h1>
-        </div>
-        </div>
+      
       </div>
-      <div className="mt-5">
-        <h1 className="font-bold text-base mb-10">Popular Tags</h1>
+      {/* <div dir="rtl" className="mt-5">
+        <h1 className="font-bold text-base mb-5">كلمات اكثر بحثا</h1>
         <div className="flex flex-row flex-wrap gap-3"> 
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">plant</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">نبات</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">نبات</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">نبات</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">نبات</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">نبات</p>
+        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">نبات</p>
         </div>
-      </div>
+      </div> */}
     </div>
   </div>
   <div className='lg:w-[70%] sm:w-[70%] sm:ml-32'>
   <Cards/>
-  <div className="flex overflow-x-auto sm:justify-center ">
-      <Pagination layout="navigation" currentPage={currentPage} totalPages={100} onPageChange={onPageChange} />
-    </div>
   </div>
  </div>
- <div className="mt-5 mb-20 lg:h-52 sm:h-32"> 
+ <div className="mt-10 lg:h-52 sm:h-32"> 
  <Swiper
         slidesPerView={4}
         spaceBetween={0}

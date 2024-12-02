@@ -43,7 +43,7 @@ export default function Header() {
     <div className=''>
       <div>
       <div
-      className="h-screen flex flex-col items-center text-white justify-center relative"
+      className="lg:h-screen md:h-screen sm:h-[72vh] h-[72vh] flex flex-col items-center text-white justify-center relative"
       style={{
         overflow: "hidden", 
       }}
@@ -67,11 +67,11 @@ export default function Header() {
       </video>
 
 
-<div  className="flex flex-col sm:flex-row mx-auto bg-white  backdrop-blur-2xl bg-white/0 items-center justify-center rounded-xl p-4 sm:p-8 lg:p-12 max-w-4xl lg:max-h-80 space-y-6 sm:space-y-0 sm:space-x-6">
+<div  className="flex flex-col sm:flex-row mx-auto   backdrop-blur-2xl bg-white/0 items-center justify-center rounded-xl p-4 sm:p-8 lg:p-12 max-w-1xl lg:max-h-80 space-y-0 sm:space-y-0 sm:space-x-6">
   <img
     src={hero}
     alt="Hero"
-    className="hero-image w-48 sm:w-48  lg:max-w-72 md:w-72   "
+    className="hero-image w-44 sm:w-44  lg:max-w-72 md:w-72   "
     style={{ filter: "drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.9))" }}
   />
   <div className="text-center z-10 w-full sm:w-1/2 px-4">

@@ -175,7 +175,7 @@ export default function Reviews() {
   return (
     <div      ref={sectionRef} className={`plantscontainer relative  font-cairo  mb-4 text-center lg:mt-24 md:mt-24 sm:mt-32 mt-32  ${isVisible ? "animate-fadeInUp" : "opacity-0" } transition-opacity duration-500`}>
      
-     <h1  className={`text-4xl text-[#375840]  mb-10  transform transition-all duration-700
+     <h1  className={`lg:text-4xl md:text-3xl sm:text-xl text-xl  text-[#375840]  mb-10  transform transition-all duration-700
         
         `}>
 اراّء العملاء            </h1>   
@@ -273,18 +273,18 @@ export default function Reviews() {
         }}
       />
 
-{/* <img
+<img
         src={leves}
         alt=""
-        className="w-5 absolute top-64    z-0 md:w-16 lg:w-16 xl:w-16"
+        className="w-12 absolute right-10    z-0 md:w-16 lg:w-16 xl:w-16"
         style={{
           filter: "drop-shadow(0px 12px 10px rgba(0, 0, 0, 0.9))",
         }}
-      /> */}
+      />
       <img
         src={leves}
         alt=""
-        className="w-5 absolute top-0 right-20    z-0 md:w-16 lg:w-16 xl:w-16"
+        className="w-5 absolute top-0 lg:right-20    z-0 md:w-16 lg:w-16 xl:w-16"
         style={{
           filter: "drop-shadow(0px 12px 10px rgba(0, 0, 0, 0.9))",
         }}
