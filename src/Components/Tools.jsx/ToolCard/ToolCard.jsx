@@ -1,7 +1,8 @@
 import { Pagination } from "flowbite-react";
 import { useState } from "react";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function ToolCard() {
   const swiperSlideImgStyles = {
     display: 'block',
@@ -9,7 +10,7 @@ export default function ToolCard() {
     height: '100%',
     objectFit: 'cover',
   };
-
+  const notify = () => toast("تمت الاضافه");
   const itemsPerPage = 8;
   const tools = new Array(20).fill({ name: 'Tool', price: '$25' }); 
 
@@ -39,10 +40,11 @@ export default function ToolCard() {
                 <p>{tool.name}</p>
                 <p>{tool.price}</p>
               </div>
-              <button className="bg-green-800 text-white px-2 rounded-full hover:bg-green-600 text-sm">
+              <button  onClick={notify} className="bg-green-800 text-white px-2 rounded-full hover:bg-green-600 text-sm">
                 اضف للسلة
               </button>
             </div>
+            <ToastContainer className={'text-right mt-10'}/>
           </div>
         ))}
       </div>

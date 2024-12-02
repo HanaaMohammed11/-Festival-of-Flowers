@@ -42,10 +42,10 @@ function Detilesplant(){
     }
   };
     return(<>
-<div  className="flex justify-between  container mx-14 mt-5 p-10">
- <div className="w-1/2">
+<div  className=" lg:flex lg:justify-between  container lg:mx-14 mt-5 p-10">
+ <div className="lg:w-1/2 xs:w-[100%]">
 <img  src={plant} alt=""width={500} />
-<div className="mt-5 w-[83%] lg:h-20 sm:h-32">
+<div className="mt-5 lg:w-[83%] lg:h-20 sm:h-32">
 <Swiper
         slidesPerView={3}
         spaceBetween={5}
@@ -64,13 +64,13 @@ function Detilesplant(){
       </Swiper>
       </div>
  </div>
- <div dir="rtl" className="w-1/2 mt-20">
-<h1 className="text-2xl font-semibold mb-3 "> نبات العنكبوت</h1>
-<h1 className="text-2xl font-semibold text-[#375744] mb-3">  {totalPrice} ج</h1>
-<p className="text-lg ">نبات العنكبوت، Chlorophytum comosum، هو أحد أكثر النباتات المنزلية شيوعًا. 
+ <div dir="rtl" className="lg:w-1/2 lg:mt-20 xs:mt-10 ">
+<h1 className="lg:text-2xl xs:text-xl font-semibold mb-3 "> نبات العنكبوت</h1>
+<h1 className="lg:text-2xl xs:text-lg font-semibold text-[#375744] mb-3">  {totalPrice} ج</h1>
+<p className="lg:text-lg ">نبات العنكبوت، Chlorophytum comosum، هو أحد أكثر النباتات المنزلية شيوعًا. 
   نبات العنكبوت، Chlorophytum comosum، هو واحد من أكثر النباتات المنزلية شيوعًا والمعروفة. 
   تحظى بشعبية خاصة لدى المبتدئين، فهي سهلة النمو والتكاثر، وتتحمل الإهمال</p>
-  <div className="mt-10 flex justify-around w-[60%]">
+  <div className="mt-10 flex justify-around lg:w-[60%]">
   <form className="max-w-xs mx-auto">
               <div className="relative flex items-center max-w-[8rem]">
                 <button
@@ -130,18 +130,18 @@ function Detilesplant(){
   </div>
  </div>
     </div>
-    <div dir="rtl" className="mt-20 mb-20">
-      <div className="text-center">
+    <div dir="rtl" className="lg:mt-20 xs:mt-14 mb-20">
+      <div className=" text-center">
         <button
           type="button"
-          className={`w-40 ${activeTab === 'description' ? ' bg-[#375744] text-white rounded-md' : ''}`}
+          className={`lg:w-40 xs:w-28 ${activeTab === 'description' ? ' bg-[#375744] text-white rounded-md' : ''}`}
           onClick={() => setActiveTab('description')}
         >
        وصف النبات
         </button>
         <button
           type="button"
-          className={`w-40 ${activeTab === 'reviews' ? ' bg-[#375744] text-white rounded-md' : ''}`}
+          className={`lg:w-40 xs:w-28 ${activeTab === 'reviews' ? ' bg-[#375744] text-white rounded-md' : ''}`}
           onClick={() => setActiveTab('reviews')}
         >
         التعليقات

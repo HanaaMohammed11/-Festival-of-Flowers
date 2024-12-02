@@ -20,25 +20,25 @@ function Plants (){
   const onPageChange = (page) => setCurrentPage(page);
     return(
     <>
- <div  className="relative w-full h-[35vh] bg-cover bg-center"
+ <div  className="relative w-full lg:h-[35vh] xs:h-[20vh] md:h-[25vh] bg-cover bg-center"
         style={{
           backgroundImage: `url(${head})`,
         }}>
-      <h1 className="text-center text-6xl text-white pt-12">زين بيتك بنباتتنا</h1>
+      <h1 className="text-center lg:text-6xl xs:text-3xl md:text-4xl text-white xs:pt-10 lg:pt-12">زين بيتك بنباتتنا</h1>
  </div>
  <div className="bg-zinc-300 h-[10vh] flex justify-center">
- <div className="relative pt-5 w-[30%] ">
+ <div className="relative pt-5 lg:w-[30%] xs:w-[60%] ">
   <input 
-    className="rounded-lg w-full h-7 pl-2 text-right " 
+    className="rounded-lg  w-full  lg:h-7  lg:pl-2 text-right " 
     placeholder="بحث "
   />
-  <span className="absolute left-5 top-9 transform -translate-y-1/2 text-gray-500">
+  <span className="absolute lg:left-5 lg:top-9 xs:left-2 xs:top-8 transform -translate-y-1/2 text-gray-500">
   <CiSearch />
   </span>
 </div>
  </div>
- <div className="flex justify-between mt-20 container lg:mx-5 border-b-2 pb-20" >
-  <div className='lg:w-[20%] sm:w-[30%] sm:ml-5'> 
+ <div className="flex justify-between lg:mt-20 container lg:mx-5 border-b-2 lg:pb-20 xs:pb-10" >
+  <div className='lg:w-[20%] xs:hidden sm:w-[30%] sm:ml-5'> 
     <div>
     <div>
   <h1 className="text-2xl font-bold mb-5 text-right">التصنيفات</h1>
@@ -130,11 +130,11 @@ function Plants (){
       </div> */}
     </div>
   </div>
-  <div className='lg:w-[70%] sm:w-[70%] sm:ml-32'>
+  <div className='lg:w-[70%] xs:w-[50%] xs:ml-32'>
   <Cards/>
   </div>
  </div>
- <div className="mt-10 lg:h-52 sm:h-32"> 
+ <div className="mt-10 lg:h-52 sm:h-32 xs:h-24"> 
  <Swiper
         slidesPerView={4}
         spaceBetween={0}

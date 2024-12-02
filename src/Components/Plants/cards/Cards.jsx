@@ -19,7 +19,7 @@ function Cards() {
   const currentTools = tools.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage); 
   return (
     <div className="mt-10">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+    <div className="grid grid-cols-1  md:grid-cols-3 gap-6 mb-10">
       {currentTools.map((tool, index) => (
         <div
         key={index}
@@ -58,7 +58,7 @@ function Cards() {
         </div>
       ))}
     </div>
-    <div className="flex justify-center mt-16">
+    <div className="flex justify-center mt-16 xs:w-60 ">
   <div className="flex items-center gap-4">
     {/* زر السهم السابق */}
     <div className="flex justify-center gap-3 items-center hover:bg-gray-300 bg-gray-200 text-black px-4 py-2 rounded-full  disabled:opacity-50"       onClick={() => currentPage > 1 && onPageChange(currentPage - 1)}
@@ -72,7 +72,7 @@ function Cards() {
     </button>
     </div>
 
-    <p className="px-4 py-2 text-lg text-[#375744] font-semibold">{currentPage} / {totalPages}</p>
+    <p className="px-4 py-2 xs:w-20 text-lg text-[#375744] font-semibold">{currentPage} / {totalPages}</p>
 
     {/* زر السهم التالي */}
     <div className="flex justify-center gap-3 items-center hover:bg-gray-300 bg-gray-200 text-black px-4 py-2 rounded-full  disabled:opacity-50"       onClick={() => currentPage < totalPages && onPageChange(currentPage + 1)}
