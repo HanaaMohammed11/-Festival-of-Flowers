@@ -381,7 +381,17 @@ export default function NavBar() {
             }          >
             من نحن
           </NavLink>
-       
+          <NavLink
+            to="/dashboard"
+            onClick={closeSidebar}
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+       لوحة التحكم
+          </NavLink>
           <NavLink
             to="/pricing"
             onClick={closeSidebar}

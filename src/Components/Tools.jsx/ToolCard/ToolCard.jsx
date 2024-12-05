@@ -1,4 +1,3 @@
-import { Pagination } from "flowbite-react";
 import { useState } from "react";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
