@@ -170,7 +170,7 @@ const OrderTable = () => {
               <strong>التاريخ:</strong> {order.date}
             </p>
             <p className="text-gray-700 mb-2">
-              <strong>السعر:</strong> {order.price}
+               {order.price} <strong> : السعر</strong>
             </p>
             <p className="text-gray-700 mb-2">
               <strong>الحالة:</strong>{" "}
