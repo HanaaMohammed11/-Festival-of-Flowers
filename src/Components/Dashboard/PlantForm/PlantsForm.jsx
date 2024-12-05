@@ -130,6 +130,15 @@ export default function PlantsForm() {
             </div>
             <div className="flex flex-col items-end space-y-2">
               <label htmlFor="name" className="font-cairo text-[#375840]">
+                : التكاثر
+              </label>
+              <input
+                id="name"
+                className="rounded-full bg-[#21863c2c] p-2 w-52 text-right focus:outline-none"
+              />
+            </div>
+            <div className="flex flex-col items-end space-y-2">
+              <label htmlFor="name" className="font-cairo text-[#375840]">
                 : الري
               </label>
               <input
@@ -140,7 +149,7 @@ export default function PlantsForm() {
 
             <div className="flex flex-col items-end space-y-2">
               <label htmlFor="name" className="font-cairo text-[#375840]">
-                : الضوء
+                :  الضوء والحرارة
               </label>
               <input
                 id="name"

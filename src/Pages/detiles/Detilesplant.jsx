@@ -1,22 +1,22 @@
-import plant from "../../../public/images.jpg"
+import plant from "../../../public/images.jpg";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles;
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 import { Link } from "react-router-dom";
-import './styles.css';
-import { useState } from 'react';
+import "./styles.css";
+import { useState } from "react";
 // import required modules
-import { FreeMode, Autoplay } from 'swiper/modules';
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-function Detilesplant(){
-  const [activeTab, setActiveTab] = useState('description');
-  const [quantity, setQuantity] = useState(0); 
-  const unitPrice = 200; 
-  const [totalPrice, setTotalPrice] = useState(0); 
+import { FreeMode, Autoplay } from "swiper/modules";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+function Detilesplant() {
+  const [activeTab, setActiveTab] = useState("description");
+  const [quantity, setQuantity] = useState(0);
+  const unitPrice = 200;
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const notify = () => toast("تمت الاضافه");
   const increment = () => {
@@ -41,37 +41,55 @@ function Detilesplant(){
       setTotalPrice(value * unitPrice); // تحديث السعر الإجمالي
     }
   };
-    return(<>
-<div  className=" lg:flex lg:justify-between  container lg:mx-14 mt-5 p-10">
- <div className="lg:w-1/2 xs:w-[100%]">
-<img  src={plant} alt=""width={500} />
-<div className="mt-5 lg:w-[83%] lg:h-20 sm:h-32">
-<Swiper
-        slidesPerView={3}
-        spaceBetween={5}
-        freeMode={true}
-        autoplay={{
-          delay: 1000, 
-          disableOnInteraction: false, 
-        }}
-        modules={[FreeMode, Autoplay]}
-        className="mySwiper"
-      >
-        <SwiperSlide><img src="public/images.jpg" className="rounded-lg"/></SwiperSlide>
-        <SwiperSlide><img src="public/images.jpg"className="rounded-lg"/></SwiperSlide>
-        <SwiperSlide><img src="public/images.jpg"className="rounded-lg"/></SwiperSlide>
-        <SwiperSlide><img src="public/images.jpg"className="rounded-lg"/></SwiperSlide>
-      </Swiper>
-      </div>
- </div>
- <div dir="rtl" className="lg:w-1/2 lg:mt-20 xs:mt-10 ">
-<h1 className="lg:text-2xl xs:text-xl font-semibold mb-3 "> نبات العنكبوت</h1>
-<h1 className="lg:text-2xl xs:text-lg font-semibold text-[#375744] mb-3">  {totalPrice} ج</h1>
-<p className="lg:text-lg ">نبات العنكبوت، Chlorophytum comosum، هو أحد أكثر النباتات المنزلية شيوعًا. 
-  نبات العنكبوت، Chlorophytum comosum، هو واحد من أكثر النباتات المنزلية شيوعًا والمعروفة. 
-  تحظى بشعبية خاصة لدى المبتدئين، فهي سهلة النمو والتكاثر، وتتحمل الإهمال</p>
-  <div className="mt-10 flex justify-around lg:w-[60%]">
-  <form className="max-w-xs mx-auto">
+  return (
+    <>
+      <div className=" lg:flex lg:justify-between  container lg:mx-14 mt-5 p-10">
+        <div className="lg:w-1/2 xs:w-[100%]">
+          <img src={plant} alt="" width={500} />
+          <div className="mt-5 lg:w-[83%] lg:h-20 sm:h-32">
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={5}
+              freeMode={true}
+              autoplay={{
+                delay: 1000,
+                disableOnInteraction: false,
+              }}
+              modules={[FreeMode, Autoplay]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <img src="public/images.jpg" className="rounded-lg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="public/images.jpg" className="rounded-lg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="public/images.jpg" className="rounded-lg" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="public/images.jpg" className="rounded-lg" />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+        <div dir="rtl" className="lg:w-1/2 lg:mt-20 xs:mt-10  font-cairo">
+          <h1 className="lg:text-2xl xs:text-xl font-semibold mb-3 ">
+            {" "}
+            نبات العنكبوت
+          </h1>
+          <h1 className="lg:text-2xl xs:text-lg font-semibold text-[#375744] mb-3">
+            {" "}
+            {totalPrice} ج
+          </h1>
+          <p className="lg:text-lg ">
+            نبات العنكبوت، Chlorophytum comosum، هو أحد أكثر النباتات المنزلية
+            شيوعًا. نبات العنكبوت، Chlorophytum comosum، هو واحد من أكثر
+            النباتات المنزلية شيوعًا والمعروفة. تحظى بشعبية خاصة لدى المبتدئين،
+            فهي سهلة النمو والتكاثر، وتتحمل الإهمال
+          </p>
+          <div className="mt-10 flex justify-around lg:w-[60%]">
+            <form className="max-w-xs mx-auto">
               <div className="relative flex items-center max-w-[8rem]">
                 <button
                   type="button"
@@ -125,58 +143,133 @@ function Detilesplant(){
                 </button>
               </div>
             </form>
-  <button type="button" onClick={notify} className="w-40 border-2 border-[#375744] text-white bg-[#375744] rounded-md p-2 hover:bg-white hover:text-[#375744]">اضف الى السله</button>
-  <ToastContainer className={'text-right mt-10'}/>
-  </div>
- </div>
-    </div>
-    <div dir="rtl" className="lg:mt-20 xs:mt-14 mb-20">
-      <div className=" text-center">
-        <button
-          type="button"
-          className={`lg:w-40 xs:w-28 ${activeTab === 'description' ? ' bg-[#375744] text-white rounded-md' : ''}`}
-          onClick={() => setActiveTab('description')}
-        >
-       وصف النبات
-        </button>
-        <button
-          type="button"
-          className={`lg:w-40 xs:w-28 ${activeTab === 'reviews' ? ' bg-[#375744] text-white rounded-md' : ''}`}
-          onClick={() => setActiveTab('reviews')}
-        >
-        التعليقات
-        </button>
+            <button
+              type="button"
+              onClick={notify}
+              className="w-40 border-2 border-[#375744] text-white bg-[#375744] rounded-md p-2 hover:bg-white hover:text-[#375744]"
+            >
+              اضف الى السله
+            </button>
+            <ToastContainer className={"text-right mt-10"} />
+          </div>
+        </div>
       </div>
-      <div className="mx-14 mt-10">
-        {activeTab === 'description' ? (
-           <div className="text-gray-800 dark:text-gray-200 leading-relaxed">
-           <h2 className="text-lg font-bold mb-4">   - نبتة العنكبوت</h2>
-           <p>
-             نبتة العنكبوت واسمها العلمي *كلوروفيتوم كوموسوم المخططة Chlorophytum Comosum*. وتسمى أيضاً عنكبوتية
-             مخططة أو كلوروفيتوم مقلم. موطنها الأصلي جنوب أفريقيا، ولها سيقان صفراء زاحفة تظهر عليها عناقيد أزهار
-             بيضاء صغيرة تنتج كل منها نباتاً جديداً نسخة من النبات الأم.
-           </p>
-           <p className="mt-4">
-             إضافة لكونها نبتة مميزة الشكل، تعتبر نبتة كلوروفيتوم من النباتات التي تنقي الجو. ولذلك ينصح باستخدامها
-             في المنزل أو بيئات العمل.
-           </p>
-           <h3 className="text-lg font-semibold mt-6">   -  العناية بنبات العنكبوت</h3>
-           <p className="mt-2">
-             المدى الحراري المثالي لنمو هذه الشجيرة بين 18 إلى 25 درجة مئوية. تحتاج إلى ضوء جيد داخل المنزل دون تعرض
-             مباشر لأشعة الشمس إلا في الشتاء، مع ري غزير يقل في الشتاء.
-           </p>
-           <h3 className="text-lg font-semibold mt-6" >     -  تكاثر نبات العنكبوت</h3>
-           <p className="mt-2">
-             تتكاثر عن طريق فصل النباتات النامية (الناتجة من الأزهار) ووضعها في الماء حتى تنتج جذوراً ثم غرسها في
-             التربة.
-           </p>
-         </div>
-        ) : (
-        <input className="border-2 border-[#375744] w-60"></input>
-        )}
+      <div dir="rtl" className="lg:mt-20 xs:mt-14 mb-20 font-cairo">
+        <div className=" text-center">
+          <button
+            type="button"
+            className={`lg:w-40 xs:w-28  ${
+              activeTab === "description"
+                ? " bg-[#375744] text-white rounded-full p-2"
+                : ""
+            }`}
+            onClick={() => setActiveTab("description")}
+          >
+            وصف النبات
+          </button>
+          <button
+            type="button"
+            className={`lg:w-40 xs:w-28 ${
+              activeTab === "reviews"
+                ? " bg-[#375744] text-white rounded-full p-2"
+                : ""
+            }`}
+            onClick={() => setActiveTab("reviews")}
+          >
+            التعليقات
+          </button>
+        </div>
+        <div className="mx-14 mt-10">
+          {activeTab === "description" ? (
+            <div className="text-gray-800 dark:text-gray-200 leading-relaxed">
+              <h2 className="text-lg font-bold mb-4"> - نبتة العنكبوت</h2>
+              <p>
+                نبتة العنكبوت واسمها العلمي *كلوروفيتوم كوموسوم المخططة
+                Chlorophytum Comosum*. وتسمى أيضاً عنكبوتية مخططة أو كلوروفيتوم
+                مقلم. موطنها الأصلي جنوب أفريقيا، ولها سيقان صفراء زاحفة تظهر
+                عليها عناقيد أزهار بيضاء صغيرة تنتج كل منها نباتاً جديداً نسخة
+                من النبات الأم.
+              </p>
+              <p className="mt-4">
+                إضافة لكونها نبتة مميزة الشكل، تعتبر نبتة كلوروفيتوم من النباتات
+                التي تنقي الجو. ولذلك ينصح باستخدامها في المنزل أو بيئات العمل.
+              </p>
+              <h3 className="text-lg font-semibold mt-6">
+                {" "}
+                - الضوء والحرارة
+              </h3>
+              <p className="mt-2">
+                المدى الحراري المثالي لنمو هذه الشجيرة بين 18 إلى 25 درجة مئوية.
+                تحتاج إلى ضوء جيد داخل المنزل دون تعرض مباشر لأشعة الشمس إلا في
+                الشتاء، مع ري غزير يقل في الشتاء.
+              </p>
+              <h3 className="text-lg font-semibold mt-6">
+                {" "}
+                - الري
+              </h3>
+              
+              <p className="mt-2">
+                تتكاثر عن طريق فصل النباتات النامية (الناتجة من الأزهار) ووضعها
+                في الماء حتى تنتج جذوراً ثم غرسها في التربة.
+              </p>
+              <h3 className="text-lg font-semibold mt-6">
+                {" "}
+                -التسميد
+              </h3>
+              <p className="mt-2">
+                تتكاثر عن طريق فصل النباتات النامية (الناتجة من الأزهار) ووضعها
+                في الماء حتى تنتج جذوراً ثم غرسها في التربة.
+              </p>
+              <h3 className="text-lg font-semibold mt-6">
+                {" "}
+                - تكاثر نبات العنكبوت
+              </h3>
+              <p className="mt-2">
+                تتكاثر عن طريق فصل النباتات النامية (الناتجة من الأزهار) ووضعها
+                في الماء حتى تنتج جذوراً ثم غرسها في التربة.
+              </p>
+            </div>
+          ) : (
+            <div>
+            {/* قسم إضافة تعليق */}
+            <div className="flex justify-center gap-5">
+              <input
+                className="rounded-full p-4 bg-[#21863c2c] w-64 lg:h-7 lg:pl-2 text-right"
+                placeholder="اضف تعليقك"
+              />
+              <button className="bg-green-700 font-cairo flex justify-center items-center text-white px-4 sm:px-6 py-1 rounded-full hover:bg-green-600 text-sm sm:text-base">
+                ارسال
+              </button>
+            </div>
+          
+            <div className="mt-6 p-4  bg-[#21863c2c] rounded-lg shadow-lg">
+              <h2 className="text-lg font-semibold text-green-800 mb-4 text-right">
+                التعليقات
+              </h2>
+              <div className="space-y-4">
+                <div className="bg-white p-3 rounded-lg shadow text-right">
+                  <p className="text-sm text-gray-700">
+                    <span className="font-bold text-green-700">محمد أحمد:</span> النباتات رائعة جدًا وجودة ممتازة!
+                  </p>
+                </div>
+                <div className="bg-white p-3 rounded-lg shadow text-right">
+                  <p className="text-sm text-gray-700">
+                    <span className="font-bold text-green-700">سارة علي:</span> أحببت التعامل معكم والخدمة أكثر من رائعة.
+                  </p>
+                </div>
+                <div className="bg-white p-3 rounded-lg shadow text-right">
+                  <p className="text-sm text-gray-700">
+                    <span className="font-bold text-green-700">أحمد خالد:</span> النباتات كانت صحية جدًا ووصلت بسرعة.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          )}
+        </div>
       </div>
-    </div>
-
-    </>)
+    </>
+  );
 }
 export default Detilesplant;
