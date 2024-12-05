@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
     <div className="about lg:flex md:flex sm:flex xxs:flex-col xs:flex-col flex justify-center items-center pb-24 p-2">
-      <div className='shadow-2xl lg:w-1/4 xl:w-1/4 '>
+      <div className='shadow-2xl lg:w-1/4 xl:w-1/4 xs:hidden '>
         <img src={img} alt="" className='w-full h-80  object-fill rounded-lg shadow-xl' />
       </div>
 
