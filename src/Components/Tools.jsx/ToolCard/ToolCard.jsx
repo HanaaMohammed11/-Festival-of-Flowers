@@ -25,7 +25,7 @@ export default function ToolCard() {
   const currentTools = tools.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
-    <div className="mt-4 font-cairo pb-6">
+    <div className="mt-4 font-cairo pb-24">
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mx-2 justify-center items-center">
         {currentTools.map((tool, index) => (
           <div

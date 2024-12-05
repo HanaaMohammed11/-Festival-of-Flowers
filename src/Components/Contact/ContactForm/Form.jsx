@@ -2,7 +2,7 @@ import {  Textarea } from 'flowbite-react'
 
 export default function Form() {
   return (
-    <div className=' p-4 bg-[#1bc24827] border-emerald-200 border-2 rounded-lg shadow-xl flex justify-center items-center  '>
+    <div className=' p-4 bg-[#1bc24827]  border-emerald-200 border-2 rounded-lg shadow-xl flex justify-center items-center  '>
         <div
         >
 

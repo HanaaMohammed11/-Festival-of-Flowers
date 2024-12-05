@@ -2,8 +2,8 @@ import { FaSquareWhatsapp } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <div className="relative bottom-0 ">
-      <div className="bg-slate-700 w-full h-20  flex justify-center items-center mt-auto">
+    <div className="relative bottom-0 block sm:hidden xxs:hidden xs:hidden lg:block">
+      <div className="bg-green-700 w-full h-20  flex justify-center items-center mt-auto">
         <div className="flex gap-4 justify-center items-center">
           {/* WhatsApp Icon */}
           <a

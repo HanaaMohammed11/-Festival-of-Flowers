@@ -5,7 +5,7 @@ export default function PricingCards() {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div className='xl:flex lg:flex md:flex  sm:flex xs:flex-col xxs:flex-col  flex-wrap gap-5 mt-5 justify-center items-center font-cairo flex'>
+    <div className='xl:flex lg:flex md:flex pb-24 sm:flex xs:flex-col xxs:flex-col  flex-wrap gap-5 mt-5 justify-center items-center font-cairo flex'>
         <div className='card1 shadow-xl'>
             <Card className='text-center flex justify-center items-center lg:w-80 w-64'>
               <h1 className='lg:text-6xl md:text-6xl sm:text-5xl xxs:text-4xl xs:text-4xl font-semibold text-[#375840]'>  200 <span className='text-sm '>EGP</span> </h1>

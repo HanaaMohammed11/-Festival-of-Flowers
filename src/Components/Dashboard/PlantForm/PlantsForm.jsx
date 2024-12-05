@@ -8,7 +8,7 @@ export default function PlantsForm() {
     setSelectedCategory(event.target.value);
   };
   return (
-    <div className="flex justify-center items-center w-full p-12">
+    <div className="flex justify-center items-center w-full p-12 pb-24">
       <div>
         <div className="flex w-full items-center justify-center  mb-3">
           <Label
