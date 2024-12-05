@@ -200,6 +200,17 @@ export default function NavBar() {
          
           </NavLink>
           <NavLink
+            to="/dashboard"
+            onClick={closeSidebar}
+            className={({ isActive }) =>
+              isActive
+                ? "text-amber-100 font-bold"
+                : "text-white hover:text-amber-100"
+            }
+          >
+       لوحة التحكم
+          </NavLink>
+          <NavLink
             to="/contactus"
             onClick={closeSidebar}
             className={({ isActive }) =>

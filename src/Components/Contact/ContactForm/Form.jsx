@@ -1,5 +1,4 @@
-import { Label, Textarea } from 'flowbite-react'
-import React from 'react'
+import {  Textarea } from 'flowbite-react'
 
 export default function Form() {
   return (

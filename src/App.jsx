@@ -12,6 +12,8 @@ import Tools from './Pages/Tools/Tools';
 import Pricing from './Pages/Pricing/Pricing';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import ContactUs from './Pages/ContactUs/ContactUs';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import OrderDetails from './Components/Dashboard/Orders/OrderDetails';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -39,6 +41,10 @@ function App() {
       <Route path='/pricing' element={<Pricing/>}/>
       <Route path='/aboutus' element={<AboutUs/>}/>
       <Route path='/contactus' element={<ContactUs/>}/>
+      <Route path='/dashboard' element={<Dashboard/>}/>
+      <Route path="/order" element={<OrderDetails />} />
+
+
 
 
 
