@@ -39,10 +39,10 @@ function Cart() {
   };
 
   return (
-    <main dir="rtl" className="container mx-auto py-8 px-4">
-      <h2 className="lg:text-4xl xs:text-2xl font-bold mb-20 mt-5">
-        سلة التسوق
-      </h2>
+    <main dir="rtl" className="container mx-auto py-8 px-4 font-cairo">
+       <h1 className="text-[#375840] mb-5 lg:text-4xl md:text-3xl sm:text-xl text-xl transform transition-all duration-700">
+      سلة التسوق
+      </h1>
       <div className="lg:grid grid-cols-3 gap-6">
         {/* عناصر السلة */}
         <div className="col-span-2 p-4 border shadow-2xl xs:mb-10 border-[#375744] rounded">

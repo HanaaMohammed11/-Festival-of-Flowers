@@ -16,7 +16,7 @@ const OrderDetails = () => {
     status: "قيد الانتظار",
   });
 
-  const [newStatus, setNewStatus] = useState(order.status); // حالة مؤقتة للحفظ
+  const [newStatus, setNewStatus] = useState(order.status); 
 
   const saveStatus = () => {
     setOrder((prev) => ({ ...prev, status: newStatus }));
@@ -32,7 +32,6 @@ const OrderDetails = () => {
       </h1>
 
       <div className="lg:flex md:flex sm:flex xxs:flex-col xs:flex-col mt-6 justify-center items-center p-9 shadow-2xl rounded-lg">
-        {/* صورة الطلب */}
         <div className="w-full lg:w-2/3">
           <img
             src=".\src\assets\plant4.jpg"
@@ -41,7 +40,6 @@ const OrderDetails = () => {
           />
         </div>
 
-        {/* تفاصيل الطلب */}
         <div className="w-full lg:w-2/3 text-right">
           <p className="mb-2">
             <strong>الاسم:</strong> {order.name}
@@ -81,7 +79,6 @@ const OrderDetails = () => {
         </div>
       </div>
 
-      {/* زر الحفظ */}
       <button
         onClick={saveStatus}
         className="mt-6 px-4 py-2 bg-[#375840] text-white rounded-md shadow-md"
