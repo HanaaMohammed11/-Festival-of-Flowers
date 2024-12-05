@@ -27,7 +27,7 @@ const OrderDetails = () => {
   const statusOptions = ["مكتمل", "ملغي", "قيد الانتظار", "قيد الإرسال"];
 
   return (
-    <div className="p-6 font-cairo">
+    <div className="p-6 font-cairo pb-24">
       <h1 className="text-[#375840] text-center lg:text-4xl md:text-3xl sm:text-xl text-xl transform transition-all duration-700">
         تفاصيل الطلب {order.id}
       </h1>
