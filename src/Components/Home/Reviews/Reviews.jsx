@@ -128,16 +128,12 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
-import slide_img from '../../../assets/plant3.jpg';
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
-import hero from "../../../assets/ab61497a-3d00-4508-82f9-69f34d3596b9.png";
+// import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import leves from "../../../assets/59a36e7ff3603bd4b72de0ac45944418-removebg-preview.png";
 import { useEffect, useRef, useState } from 'react';
 
 
 export default function Reviews() {
-  const nav = useNavigate();
 
   const swiperStyles = {
     // width: '100%',

@@ -1,4 +1,3 @@
-import React from "react";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { MdOutlineGroups } from "react-icons/md";
 import { RiCustomerService2Fill, RiPlantLine } from "react-icons/ri";

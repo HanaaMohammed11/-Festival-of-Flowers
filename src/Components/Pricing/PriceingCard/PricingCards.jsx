@@ -1,5 +1,5 @@
 import { Card, FileInput, Label, Modal } from 'flowbite-react'
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 export default function PricingCards() {
   const [openModal, setOpenModal] = useState(false);

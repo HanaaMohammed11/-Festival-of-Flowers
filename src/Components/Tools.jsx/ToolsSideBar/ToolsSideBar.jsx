@@ -1,6 +1,5 @@
 import { useState } from "react";
 import ToolCard from "../ToolCard/ToolCard";
-import { CiSearch } from "react-icons/ci";
 
 function ToolsSideBar() {
   const [selectedCategory, setSelectedCategory] = useState("");

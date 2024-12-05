@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import  { useState } from "react";
+
 
 const OrderDetails = () => {
-  const { orderId } = useParams();
-  const navigate = useNavigate();
+
 
   const [order, setOrder] = useState({
     id: "#1632",
