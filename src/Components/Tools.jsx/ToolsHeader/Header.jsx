@@ -1,7 +1,9 @@
+import { CiSearch } from "react-icons/ci";
 import head from "../../../assets/WhatsApp Image 2024-11-28 at 11.40.16 PM.jpeg";
 
 export default function Header() {
   return (
+    <div>
   <div  className=" w-full pt-9 bg-cover bg-center"
         style={{
           backgroundImage: ` linear-gradient(rgba(0, 0, 0, .7), rgba(0, 100,10, .5)) ,url('${head}')`,
@@ -22,5 +24,17 @@ export default function Header() {
    <path className="elementor-shape-fill" d="M15.6,13.2c0-0.1,4.3,0,6.7,0.5c2.4,0.5,5,1.9,5,2c0,0.1-2.7-0.8-5.1-1.4	C19.9,13.7,15.7,13.3,15.6,13.2z"></path>
 </svg>
  </div> 
+ <div className=" h-[10vh] flex justify-center">
+ <div className="relative pt-5 lg:w-[30%] xs:w-[60%] ">
+  <input 
+    className="rounded-full lg:p-4 bg-[#21863c2c]  w-full  lg:h-7  lg:pl-2 text-right " 
+    placeholder="بحث "
+  />
+  <span className="absolute lg:left-5 md:left-5 lg:top-9 xs:left-2 md:top-9 sm:left-5 sm:top-9 xs:top-8 transform -translate-y-1/2 text-gray-500">
+  <CiSearch />
+  </span>
+</div>
+ </div>
+ </div>
   )
 }

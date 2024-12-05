@@ -11,15 +11,7 @@ function ToolsSideBar() {
 
   return (
     <div className="font-cairo ">
-      <div className="relative pt-5 w-[30%] ml-2 ">
-        <input
-          className="rounded-full w-52 h-7 pr-2  text-right border-2 border-green-900 "
-          placeholder="...بحث"
-        />
-        <span className="absolute left-5 top-9 transform -translate-y-1/2 text-gray-500">
-          <CiSearch />
-        </span>
-      </div>
+ 
       <div className="flex-col md:flex-row sm:flex xxs:flex-col xs:flex-col lg:flex-row  ">
         {/* Fixed Sidebar */}
         <div className="w-[20%]  z-10 lg:right-0 xs:right-20 xxs:right-32  md:right-0 p-5">

@@ -3,7 +3,10 @@ import { useState } from "react";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
+
 export default function ToolCard() {
+  const nav=useNavigate();
   const swiperSlideImgStyles = {
     display: 'block',
     width: '100%',
@@ -23,7 +26,7 @@ export default function ToolCard() {
   const currentTools = tools.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage); 
 
   return (
-    <div className="mt-4 font-cairo ">
+    <div className="mt-4 font-cairo pb-6">
       <div className="lg:flex flex md:flex-row flex-wrap sm:flex  xs:flex-col xxs:flex-col mx-2 justify-center gap-4 items-center">
         {currentTools.map((tool, index) => (
           <div key={index} className="w-56  p-4  shadow-xl rounded-lg text-white font-cairo bg-[#316646] hover:bg-green-950/90">
@@ -35,15 +38,21 @@ export default function ToolCard() {
                 style={swiperSlideImgStyles}
               />
             </div>
-            <div className="flex justify-between">
-              <div>
+            <div className="text-center my-2">
                 <p>{tool.name}</p>
                 <p>{tool.price}</p>
               </div>
-              <button  onClick={notify} className="bg-green-800 text-white px-2 rounded-full hover:bg-green-600 text-sm">
+            <div className="flex gap-4 justify-center">
+           
+            <button  onClick={notify} className="bg-green-800 text-white px-2 rounded-full hover:bg-green-600 text-sm">
                 اضف للسلة
               </button>
+              <button onClick={()=>nav("/detiles")}  className=" bg-green-600 text-white p-2 rounded-full hover:bg-green-600 text-sm">
+             التفاصيل
+              </button>
             </div>
+          
+            
             <ToastContainer className={'text-right mt-10'}/>
           </div>
         ))}
