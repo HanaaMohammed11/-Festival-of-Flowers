@@ -16,7 +16,11 @@ import { FreeMode, Autoplay } from 'swiper/modules';
 import Cards from "../../Components/Plants/cards/Cards";
 function Plants (){
   const [currentPage, setCurrentPage] = useState(1);
-  
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
   const onPageChange = (page) => setCurrentPage(page);
     return(
     <>
@@ -37,6 +41,38 @@ function Plants (){
   </span>
 </div>
  </div>
+ <div className="flex justify-around">
+ <div className="sm:block md:hidden xs:block xxs:block hidden right-1 mt-10 lg:hidden  ">
+              <select
+                value={selectedCategory}
+                onChange={handleCategoryChange}
+                className=" p-1 bg-[#375744] text-right text-white rounded-lg focus:outline-none"
+              >
+                <option value="" disabled>
+                  اختر التصنيف
+                </option>
+                <option value="protection-tools">النباتات العشبيه </option>
+                <option value="irrigation-tools"> الشجيرات الصغيره</option>
+                <option value="digging-tools"> الاشجار</option>
+                <option value="pruning-tools">النباتات المتسلقه </option>
+                <option value="pruning-tools">النباتات الزاحفه </option>
+              </select>
+            </div>
+            <div className="sm:block md:hidden xs:block xxs:block hidden left-1  mt-10 lg:hidden  ">
+              <select
+                value={selectedCategory}
+                onChange={handleCategoryChange}
+                className=" p-1 bg-[#375744] text-right text-white rounded-lg focus:outline-none"
+              >
+                <option value="" disabled>
+                اختر السعر
+                </option>
+                <option value="fertilizers">50 - 100</option>
+                <option value="pots">100-150</option>
+                <option value="protection-tools"> 150-200</option>
+              </select>
+            </div>
+            </div>
  <div className="flex justify-between lg:mt-20 container lg:mx-5 border-b-2 lg:pb-20 xs:pb-10" >
   <div className='lg:w-[20%] xs:hidden sm:w-[30%] sm:ml-5'> 
     <div>
@@ -115,22 +151,10 @@ function Plants (){
           <img src="public/1603744971592.webp"className=" rounded-full" width={90}/>
         </div>
         </div>
-      
       </div>
-      {/* <div dir="rtl" className="mt-5">
-        <h1 className="font-bold text-base mb-5">كلمات اكثر بحثا</h1>
-        <div className="flex flex-row flex-wrap gap-3"> 
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">نبات</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">نبات</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">نبات</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">نبات</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">نبات</p>
-        <p className="rounded-lg px-4 py-2 bg-[#375744] inline-block text-white">نبات</p>
-        </div>
-      </div> */}
     </div>
   </div>
-  <div className='lg:w-[70%] xs:w-[60%] xs:ml-20 '>
+  <div className='lg:w-[70%] xs:w-[60%] xs:mt-10 xs:ml-20'>
   <Cards/>
   </div>
  </div>
