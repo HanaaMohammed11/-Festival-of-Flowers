@@ -154,7 +154,7 @@ function Plants (){
       </div>
     </div>
   </div>
-  <div className='lg:w-[70%] xs:w-[60%] xs:mt-10 xs:ml-20'>
+  <div className='lg:w-[70%] xs:w-[80%] xs:mt-5 xs:ml-20'>
   <Cards/>
   </div>
  </div>
