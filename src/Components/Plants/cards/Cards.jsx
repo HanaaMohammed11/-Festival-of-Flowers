@@ -19,12 +19,12 @@ function Cards() {
 
   const currentTools = tools.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage); 
   return (
-    <div className="mt-10">
-    <div className="grid grid-cols-1  md:grid-cols-3 gap-6 mb-10">
+    <div className="mt-10 ">
+    <div className="grid grid-cols-1  md:grid-cols-3  gap-6 mb-10">
       {currentTools.map((tool, index) => (
         <div
         key={index}
-          className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col" dir="rtl"
+          className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col  " dir="rtl"
         >
           {/* الصورة */}
           <img

@@ -130,7 +130,7 @@ function Plants (){
       </div> */}
     </div>
   </div>
-  <div className='lg:w-[70%] xs:w-[50%] xs:ml-32'>
+  <div className='lg:w-[70%] xs:w-[60%] xs:ml-20 '>
   <Cards/>
   </div>
  </div>
