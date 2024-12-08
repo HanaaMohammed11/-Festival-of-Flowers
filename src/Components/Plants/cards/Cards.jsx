@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import slide_img from "../../../assets/plant3.jpg";
+import head from "./../../../../public/images.jpg";
 import React from "react";
 import { useState } from "react";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
@@ -27,7 +28,7 @@ function Cards() {
         >
           {/* الصورة */}
           <img
-            src="public/pNug7bBksRVsL54EEE5Wu9.jpg"
+            src={head}
             className="w-full h-48 object-cover"
           />
           {/* المحتوى */}

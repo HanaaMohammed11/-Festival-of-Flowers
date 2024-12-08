@@ -120,8 +120,8 @@ function Cart() {
           <div className="mt-4 font-bold text-[#375744]">
             الإجمالي النهائي: ${(calculateTotal() - 100 + 50).toFixed(2)} Egp
           </div>
-          <button className="mt-4 px-4 py-2 border-2 border-[#375744] text-white bg-[#375744] rounded-md hover:bg-white hover:text-[#375744] w-full">
-            إتمام الشراء الآن
+          <button  className=" mt-4 px-4 py-2 border-2 border-[#375744] text-white bg-[#375744] rounded-md hover:bg-white hover:text-[#375744] w-full">
+          <Link to='/billing'> إتمام الشراء الآن</Link> 
           </button>
         </div>
       </div>

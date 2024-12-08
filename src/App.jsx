@@ -14,6 +14,7 @@ import AboutUs from './Pages/AboutUs/AboutUs';
 import ContactUs from './Pages/ContactUs/ContactUs';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import OrderDetails from './Components/Dashboard/Orders/OrderDetails';
+import Billing from './Components/billing/Billing'
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -43,7 +44,7 @@ function App() {
       <Route path='/contactus' element={<ContactUs/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path="/order" element={<OrderDetails />} />
-
+      <Route path="/billing" element={<Billing />} />
 
 
 
